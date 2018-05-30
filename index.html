@@ -9,18 +9,18 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <nav class="full">
+    <nav id="nav" class="full">
         <div id="logo"></div>
         <ul>
-            <li>Bio</li>
+            <li onclick="navButton_OnClick()">Bio</li>
             <li>Career</li>
             <li>Experience</li>
             <li>Projects</li>
             <li>Links</li>
         </ul>
     </nav>
-    <main class="open">
-        <div id="closeMain"></div>
+    <main id="main" class="close">
+        <div id="closeMain" onclick="closeWindow_OnClick()"></div>
         <article></article>
     </main>
     <footer>
