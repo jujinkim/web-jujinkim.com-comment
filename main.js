@@ -5,6 +5,7 @@
 function shrinkNav() {
     let nav = document.getElementById("nav");
     nav.classList.remove("full");
+    nav.getElementsByTagName("ul")[0].offsetHeight;
     nav.classList.add("shrink");
 }
 
@@ -14,6 +15,7 @@ function shrinkNav() {
 function expandNav() {
     let nav = document.getElementById("nav");
     nav.classList.remove("shrink");
+    nav.getElementsByTagName("ul")[0].offsetHeight;
     nav.classList.add("full");
 }
 

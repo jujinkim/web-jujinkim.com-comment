@@ -1,0 +1,17 @@
+@media (min-width: 601px) {
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav #logo {
+        transition: left 1s;
+        position: fixed;
+        top:20px;
+    }
+    nav.full #logo {
+        
+    }
+    nav.shrink #logo {
+        left : 40px;
+    }
+}

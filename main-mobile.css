@@ -1,0 +1,75 @@
+@media (max-width: 600px) {
+    html {
+        overflow-y: scroll;
+    }
+
+    nav {
+    }
+    nav.full {
+        height: auto;
+
+    }
+
+    nav.full ul {
+        margin:100px 0 40px 0;
+        animation-duration: 0.5s;
+        animation-name: shrinkNavInPortrait;
+        animation-direction: reverse;
+        animation-fill-mode: forwards;
+    }
+    nav.fullMobile ul {
+        
+    }
+
+    nav.full li {
+        width:70vw;
+        height:40vw;
+        max-width:500px;
+        max-height:500px;
+        margin:10px;
+    }
+
+    nav.shrink {
+        flex-direction: column;
+    }
+
+    nav.shrink ul {
+        animation-duration: 1s;
+        animation-name: shrinkNavInPortrait;
+        animation-fill-mode: forwards;
+    }
+    nav.shrinkMobile ul {
+        
+    }
+    nav.shrink li {
+        
+    }
+
+    nav.full #logo {
+
+    }
+    nav.shrink #logo {
+        margin-top:2px;
+    }
+}
+
+@keyframes shrinkNavInPortrait {
+    from {
+        opacity: 1;
+        flex-direction: column;
+    }
+
+    49% {
+        opacity: 0;
+        flex-direction: column;
+    }
+    51% {
+        opacity: 0;
+        flex-direction: row;
+    }
+
+    to {
+        opacity : 1;
+        flex-direction: row;
+    }
+}
