@@ -36,6 +36,11 @@ function openWindow(elem) {
     window.classList.remove("close");
     window.classList.add("open");
 
+    //show loading
+    let loading = document.getElementById("loading");
+    loading.classList.remove("hide");
+    loading.classList.add("show");
+
     //get page url
     let xhttp = new XMLHttpRequest();
     switch(elem.id) {
@@ -61,6 +66,10 @@ function openWindow(elem) {
         if(xhttp.readyState === 4) {
             document.getElementById('mainArticle').innerHTML = xhttp.responseText;
         }
+        //hide loading
+        let loading = document.getElementById("loading");
+        loading.classList.remove("show");
+        loading.classList.add("hide");
     }
     
     //load page

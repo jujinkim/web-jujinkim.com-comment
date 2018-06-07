@@ -163,6 +163,24 @@ main article {
     height:100%;
 }
 
+/* loading indicator */
+#loading {
+    transition: width 1s, height 1s;
+    background-color:black;
+    position: absolute;
+    left:50%;
+    top:50%;
+}
+#loading.show {
+    width:10vw;
+    height:10vh;
+}
+#loading.hide {
+    width:0;
+    height:0;
+}
+
+/* footer */
 footer {
     position: fixed;
     bottom:0;
