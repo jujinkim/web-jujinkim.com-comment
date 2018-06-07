@@ -29,6 +29,10 @@
         margin:10px;
     }
 
+    nav.full li span {
+        font-size: 5vh;
+    }
+
     nav.shrink {
         flex-direction: column;
     }

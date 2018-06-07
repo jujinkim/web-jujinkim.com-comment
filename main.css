@@ -47,11 +47,25 @@ nav ul {
 nav li {
     transition: width 1s, height 1s, max-width 1s, max-height 1s, box-shadow 0.3s, margin 0.2s;
     background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     list-style-type: none;
     flex-shrink: 0;
     cursor: pointer;
     width:15vw;
     height:15vw;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+nav li span {
+    transition: font-size 0.5s;
+    opacity: 0.7;
+    color: white;
+    position: absolute;
+    width:100%; height:auto;
+    text-align: right;
+    right:0; bottom:0;
 }
 
 nav.full li {
@@ -60,9 +74,12 @@ nav.full li {
     margin:10px;
 }
 nav.full li:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
     margin-top: 7px;
     margin-bottom: 13px;
+}
+
+nav.full li span {
 }
 
 nav.shrink ul {
@@ -74,15 +91,23 @@ nav.shrink li {
     margin:4px;
 }
 
+nav.shrink li span {
+    font-size: 1.5vw;
+}
+
 /* Logo */
 nav #logo {
-    background-color:black;
     width:240px;
     height:60px;
 }
 nav.full #logo {
 }
 nav.shrink #logo {
+}
+
+/* Each Nav buttons */
+nav #navBio {
+    background-image: url(https://www.gravatar.com/avatar/b29ffe51445057ea65f5a687e8a2ac63?s=256);
 }
 
 /* Main window */
@@ -95,7 +120,7 @@ nav.shrink #logo {
     max-width:1024px;
     border: 1px solid lightgray;
     background: white;
-    border-radius: 30px;
+    border-radius: 4px;
     position: relative;
 }
 

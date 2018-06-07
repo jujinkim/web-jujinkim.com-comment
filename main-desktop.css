@@ -3,6 +3,10 @@
         flex-direction: row;
     }
 
+    nav.full li span {
+        font-size: 3vw;
+    }
+
     nav #logo {
         transition: left 1s;
         position: fixed;
