@@ -38,29 +38,28 @@ function openWindow(elem) {
 
     //get page url
     let xhttp = new XMLHttpRequest();
-
     switch(elem.id) {
         case 'navBio' :
-            xhttp.open('GET', 'pages/bio.html', false);
+            xhttp.open('GET', 'pages/bio.html', true);
         break;
         case 'navCareer' :
-            xhttp.open('GET', 'pages/career.html', false);
+            xhttp.open('GET', 'pages/career.html', true);
         break;
         case 'navExp' :
-            xhttp.open('GET', 'pages/exp.html', false);
+            xhttp.open('GET', 'pages/exp.html', true);
         break;
         case 'navPrj' :
-            xhttp.open('GET', 'pages/project.html', false);
+            xhttp.open('GET', 'pages/project.html', true);
         break;
         case 'navLink' :
-            xhttp.open('GET', 'pages/link.html', false);
+            xhttp.open('GET', 'pages/link.html', true);
         break;
     }
 
     //push page when loaded
     xhttp.onreadystatechange = function() {
         if(xhttp.readyState === 4) {
-            window.innerhtml = xhttp.responseText;
+            document.getElementById('mainArticle').innerHTML = xhttp.responseText;
         }
     }
     
