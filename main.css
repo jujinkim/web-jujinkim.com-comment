@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+
 html, body {
     margin:0;
     padding:0;
     width:100vw;
     height:100vh;
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 html {
@@ -80,6 +83,7 @@ nav.full li:hover {
 }
 
 nav.full li span {
+    padding-right:1vw;
 }
 
 nav.shrink ul {
@@ -93,6 +97,7 @@ nav.shrink li {
 
 nav.shrink li span {
     font-size: 1.5vw;
+    padding-right:0.5vw;
 }
 
 /* Logo */
