@@ -18,7 +18,7 @@ html {
 
 /* Navigation */
 nav {
-    transition: height 0.6s;
+    transition: width 0.6s, height 0.6s;
     margin:0;
     padding:0;
     display:flex;
@@ -38,12 +38,12 @@ nav.shrink {
 
 /* Nav Wrapper */
 nav ul {
-    padding:0 50px;
     margin:0;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+    padding: 0;
 }
 
 /* Nav button */
@@ -62,7 +62,7 @@ nav li {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 nav li span {
-    transition: font-size 0.5s;
+    transition: font-size 0.1s;
     opacity: 0.7;
     color: white;
     position: absolute;
@@ -102,8 +102,12 @@ nav.shrink li span {
 
 /* Logo */
 nav #logo {
-    width:240px;
-    height:60px;
+    transition: margin 1s, font-size 0.5s;
+    width:auto;
+    height:auto;
+    color:white;
+    font-family: 'Do Hyeon', sans-serif;
+    text-align: center;
 }
 nav.full #logo {
 }
@@ -112,7 +116,20 @@ nav.shrink #logo {
 
 /* Each Nav buttons */
 nav #navBio {
-    background-image: url(https://www.gravatar.com/avatar/b29ffe51445057ea65f5a687e8a2ac63?s=256);
+    /* background-image: url(https://www.gravatar.com/avatar/b29ffe51445057ea65f5a687e8a2ac63?s=256); */
+    background-image: url(images/bio.jpg);
+}
+nav #navCareer {
+    background-image: url(images/career.jpg);
+}
+nav #navExp {
+    background-image: url(images/exp.jpg);
+}
+nav #navPrj {
+    background-image: url(images/proj.jpg);
+}
+nav #navLink {
+    background-image: url(images/link.jpg);
 }
 
 /* Main window */

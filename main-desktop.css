@@ -12,10 +12,13 @@
         position: fixed;
         top:20px;
     }
+
     nav.full #logo {
-        
+        font-size:5vw;
     }
+
     nav.shrink #logo {
         left : 40px;
+        font-size:3vw;
     }
 }
