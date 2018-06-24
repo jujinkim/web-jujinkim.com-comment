@@ -169,14 +169,23 @@ main.open {
 
 /* Main close button */
 div#closeMain {
+    transition: background-color 0.3s, color 0.3s;
     position: absolute;
-    width:40px; height:40px;
+    width:14px; height:14px;
     right:0; top:0;
-    margin:10px;
+    margin:7px;
     background-color: white;
     border:1px solid lightgray;
-    border-radius: 20px;
+    border-radius: 7px;
     cursor: pointer;
+
+    text-align: center;
+    line-height: 1em;
+    color: lightgray;
+}
+div#closeMain:hover {
+    background-color:lightgray;
+    color:white;
 }
 
 /* Main Article */
@@ -187,12 +196,14 @@ main article {
 
 /* loading indicator */
 #loading {
-    transition: opacity 1s;
-    background-color:black;
-    margin:auto;
+    transition: opacity 0.3s;
+    background-color:rgba(0,0,0,0.3);
+    border-radius: 5px;
+    position: absolute;
+    left: calc(50% - (10vw / 2));
+    height: calc(50% - (10vh / 2));
     width:10vw;
     height:10vh;
-    
 }
 #loading.show {
     opacity:1;
@@ -203,6 +214,7 @@ main article {
 
 /* footer */
 footer {
+    display:none; /* I think footer is not necessary right now */
     position: fixed;
     bottom:0;
     left:0;
@@ -212,4 +224,35 @@ footer {
     color: white;
     text-align: center;
     font-size:0.8em;
+}
+
+/* Description page table */
+table.desc {
+    border:0; margin:0;
+}
+table.desc td.tb_year {
+    width:90px;
+    color:darkred;
+    font-size:0.7em;
+    padding:6px;
+    vertical-align: top;
+
+}
+table.desc td.tb_year span {
+    width:100%;
+    display:inline-block;
+    border-right: 1px solid darkred;
+}
+table.desc td.tb_desc {
+    padding-left:20px;
+}
+table.desc td.tb_desc .tag {
+    font-size:0.5em;
+    color:gray;
+    display:block;
+    margin-top:8px;
+}
+
+table.desc tr.tb_space {
+    height:20px;
 }
