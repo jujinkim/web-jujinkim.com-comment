@@ -172,7 +172,7 @@ div#closeMain {
     transition: background-color 0.3s, color 0.3s;
     position: absolute;
     width:14px; height:14px;
-    right:0; top:0;
+    right:14px; top:0;
     margin:7px;
     background-color: white;
     border:1px solid lightgray;
@@ -210,12 +210,13 @@ main article {
     color:white;
     border-radius: 5px;
     position: absolute;
-    left: calc(50% - (10vw / 2));
-    top: calc(50% - (10vh / 2));
+    left: calc(50% - (10vw / 2) - 10px);
+    top: calc(50% - (20px));
     width:10vw;
-    height:10vh;
+    height:40px;
     text-align: center;
-    line-height:1em;
+    line-height:40px;
+    padding:10px;
 }
 #loading.show {
     opacity:1;
