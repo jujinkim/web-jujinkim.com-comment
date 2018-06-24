@@ -136,7 +136,7 @@ nav #navLink {
 #mainWindow {
     transition: width 0.6s, height 0.6s;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
-    padding:10px;
+    padding:20px;
     width:80vw;
     height:calc(100% - 200px);
     max-width:1024px;
@@ -144,6 +144,7 @@ nav #navLink {
     background: white;
     border-radius: 4px;
     position: relative;
+    overflow-y: scroll;
 }
 
 main {
@@ -198,6 +199,7 @@ main article {
 #loading {
     transition: opacity 0.3s;
     background-color:rgba(0,0,0,0.3);
+    color:white;
     border-radius: 5px;
     position: absolute;
     left: calc(50% - (10vw / 2));
