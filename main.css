@@ -187,11 +187,12 @@ main article {
 
 /* loading indicator */
 #loading {
-    transition: opacity;
+    transition: opacity 1s;
     background-color:black;
-    margin:auto auto;
+    margin:auto;
     width:10vw;
     height:10vh;
+    
 }
 #loading.show {
     opacity:1;
