@@ -81,3 +81,29 @@
         flex-direction: row;
     }
 }
+
+div#closeMain {
+    right:5px;
+}
+
+/* Description page table */
+table.desc td.tb_year {
+    width:60px;
+    padding:4px;
+}
+
+table.desc td.tb_desc {
+    padding-left:10px;
+}
+table.desc td.tb_desc .tag {
+    font-size:0.7em;
+}
+
+table.desc tr.tb_space {
+    height:15px;
+}
+
+/* Main Article */
+main article {
+    padding-left:5px;
+}
