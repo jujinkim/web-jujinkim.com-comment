@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
 
 html, body {
     margin:0;
@@ -9,7 +9,7 @@ html, body {
 }
 
 html {
-    background: linear-gradient(140deg, rgb(204, 111, 157),rgb(140, 0, 26));
+    background: linear-gradient(140deg, #eeeeee, #dadada);
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow: hidden;
@@ -105,7 +105,7 @@ nav #logo {
     transition: margin 1s, font-size 0.5s;
     width:auto;
     height:auto;
-    color:white;
+    color:black;
     font-family: 'Do Hyeon', sans-serif;
     text-align: center;
 }
