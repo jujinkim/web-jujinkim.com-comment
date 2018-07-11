@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+@import url('https://fonts.googleapis.com/css?family=Gothic+A1');
 
 html, body {
     margin:0;
     padding:0;
     width:100vw;
     height:100vh;
-    font-family: 'Do Hyeon', sans-serif;
+    font-family: 'Gothic A1', sans-serif;
 }
 
 html {
@@ -268,4 +268,12 @@ table.desc td.tb_desc .tag {
 
 table.desc tr.tb_space {
     height:20px;
+}
+
+canvas {
+    position:absolute;
+    left:0; top:0; margin:0; padding:0;
+    width:100%; height:100%;
+    z-index:-1;
+    background:transparent;
 }

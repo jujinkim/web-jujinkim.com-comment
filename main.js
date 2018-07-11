@@ -91,3 +91,10 @@ function navButton_OnClick(elem) {
     openWindow(elem);
     shrinkNav();
 }
+
+/**
+ * Initialize
+ */
+function initialize() {
+    drawBackground();
+}
