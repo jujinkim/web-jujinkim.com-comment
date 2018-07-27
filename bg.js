@@ -5,7 +5,7 @@ let canvas;
 let context;
 
 let mountains = [];
-let stars;
+let stars = [];
 let clouds = [];
 let light;
 
@@ -44,7 +44,7 @@ function drawBackground() {
 }
 
 function update(time) {
-    requestAnimationFrame(update);
+    //requestAnimationFrame(update);
     draw(time);
 }
 
@@ -54,7 +54,7 @@ function update(time) {
 function draw(time) {
     //mountain
     for(i=mountains.length-1; i >=0 ; i--) {
-        context.fillStyle = makeGrayFadeColor(i, mountain.length);
+        context.fillStyle = makeFadeColor(i, mountain.length, 255, 0, 0);
         context.beginPath();
         context.moveTo(0, canvas.height);
         for(j=0; j<mountains[i].peaks.length; j++) {
@@ -112,8 +112,10 @@ function cloud() {
  /**
   * Create stars
   */
- function star() {
-
+ function star(count) {
+    for(i = 0; i < count; i++) {
+        star[i] = {x:Math.random() * 100, y:Math.random() * 100, velocity:Math.random * 5};
+    } 
  }
 
  /**
@@ -131,16 +133,32 @@ function cloud() {
  }
 
  /**
-  * Make color grayScale color
+  * Make faded color
   * @param {integer} val level. must smaller than totalsize
   * @param {integer} totalSize Totalsize 
   * @return {string} Color string
   */
- function makeGrayFadeColor(val, totalSize) {
-    let ret = "#";
+ function makeFadeColor(val, totalSize, r, g, b) {
 
     let i = val/totalSize*16;
     i = i.toString(16);
-    ret = ret + i + i + i;
-    return ret;
+
+    return makeTintColor(r, g, b, i);
+ }
+
+ /**
+  * Make tinted color
+  * @param {integer} r 
+  * @param {integer} g 
+  * @param {integer} b 
+  * @param {integer} gray 
+  */
+ function makeTintColor(r, g, b, gray) {
+    let grgr = gray / 255;
+    let rr = r * grgr;
+    let gg = g * grgr;
+    let bb = b * grgr;
+
+    console.log(rr, gg, bb, grgr, gray);
+    return "#" + rr + gg + bb;
  }
