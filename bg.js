@@ -9,6 +9,14 @@ let stars = [];
 let clouds = [];
 let light;
 
+let bgColor =  [{r : 180, g : 255, b : 200},
+                {r : 255, g : 120, b : 120}, 
+                {r : 60, g : 40, b : 220}];
+let skyColor = [{r : 190, g : 190, b : 215},
+                {r : 200, g : 160, b : 160}, 
+                {r : 20, g : 20, b : 120}];
+let timeColorNo;
+
 /**
  * Draw background
  */
@@ -35,6 +43,20 @@ function drawBackground() {
 
     //draw clouds
 
+    //get colorIndex from currentTime
+    //morning
+    if(time >= 6 && time <= 13) {
+        timeColorNo = 0;
+    }
+    //afternoon
+    else if(time > 13 && time <= 20) {
+        timeColorNo = 1;
+    }
+    //night
+    else {
+        timeColorNo = 2;
+    }
+
     //if in the day, draw sun
     //if in the night, draw moon and star
 
@@ -52,9 +74,15 @@ function update(time) {
  * Draw
  */
 function draw(time) {
+    //bg
+    let grd = context.createLinearGradient(0, 600, 0, 0);
+    grd.addColorStop(0, "rgb("+(skyColor[timeColorNo].r+40)+","+(skyColor[timeColorNo].g+40)+","+(skyColor[timeColorNo].b+40)+")");
+    grd.addColorStop(1, "rgb("+skyColor[timeColorNo].r+","+skyColor[timeColorNo].g+","+skyColor[timeColorNo].b+")");
+    context.fillStyle = grd;
+    context.fillRect(0,0,800,500);
     //mountain
     for(i=mountains.length-1; i >=0 ; i--) {
-        context.fillStyle = makeFadeColor(i, mountain.length, 255, 0, 0);
+        context.fillStyle = makeFadeColor(i+2, mountain.length+7, bgColor[timeColorNo].r, bgColor[timeColorNo].g, bgColor[timeColorNo].b);
         context.beginPath();
         context.moveTo(0, canvas.height);
         for(j=0; j<mountains[i].peaks.length; j++) {
@@ -140,7 +168,7 @@ function cloud() {
   */
  function makeFadeColor(val, totalSize, r, g, b) {
 
-    let i = val/totalSize*16;
+    let i = Math.floor(val/totalSize*16);   //color : hex
     i = i.toString(16);
 
     return makeTintColor(r, g, b, i);
@@ -155,9 +183,9 @@ function cloud() {
   */
  function makeTintColor(r, g, b, gray) {
     let grgr = gray / 255;
-    let rr = r * grgr;
-    let gg = g * grgr;
-    let bb = b * grgr;
+    let rr = Math.floor(r * grgr);
+    let gg = Math.floor(g * grgr);
+    let bb = Math.floor(b * grgr);
 
     console.log(rr, gg, bb, grgr, gray);
     return "#" + rr + gg + bb;
