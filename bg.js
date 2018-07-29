@@ -44,9 +44,9 @@ function drawBackground() {
     let time = new Date().getHours();
 
     //draw 3 mountains randomly
-    mountain(0, 70, 80, 7);
-    mountain(1, 58, 70, 8);
-    mountain(2, 45, 58, 9);  
+    mountain(0, 70, 75, 7);
+    mountain(1, 58, 67, 8);
+    mountain(2, 37, 53, 10);  
 
     //draw clouds
 
@@ -135,7 +135,7 @@ function draw(time) {
  * Create mountain
  */
 function mountain(idx, top, bottom, range) {
-    let peakCnt = Math.floor((Math.random() * (window.innerWidth / 250)) + (window.innerWidth / 250));
+    let peakCnt = Math.floor((Math.random() * (window.innerWidth / 150)) + (window.innerWidth / 500));
     if(peakCnt < 1) peakCnt = 1;
     let peaks = [];
     let volleys = [];
