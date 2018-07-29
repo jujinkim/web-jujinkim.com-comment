@@ -51,7 +51,6 @@ function drawBackground() {
     //draw clouds
 
     //get colorIndex from currentTime
-    time = 8;
     //morning
     if(time >= 7 && time <= 15) {
         timeColorNo = 0;
@@ -67,17 +66,34 @@ function drawBackground() {
 
     //if in the day, draw sun and clouds
     if (timeColorNo == 0) {
-
+        light = {
+            left : WIDTH * 0.8,
+            top : HEIGHT * 0.15,
+            color : "#FFEEEE",
+            size : 35
+        };
     }
     //if in the afternoon, draw sun
     else if (timeColorNo == 1) {
-
+        light = {
+            left : WIDTH * 0.6,
+            top : HEIGHT * 0.45,
+            color : "#FFF2C3",
+            size : 38
+        };
     }
     //if in the night, draw moon and star
     else if(timeColorNo == 2) {
         //generate stars
         let starCnt = window.innerWidth / 10;
         star(starCnt);
+
+        light = {
+            left : WIDTH * 0.8,
+            top : HEIGHT * 0.15,
+            color : "#FFF0CB",
+            size : 25
+        };
     }
 
     //draw
@@ -112,6 +128,12 @@ function draw(time) {
             }
         }
     }
+
+    //sunmoon
+    context.fillStyle = light.color;
+    context.beginPath();
+    context.arc(light.left, light.top, light.size, 0, 2 * Math.PI, false);
+    context.fill();
 
     //mountain
     for(i=mountains.length-1; i >=0 ; i--) {
