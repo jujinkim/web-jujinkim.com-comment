@@ -12,9 +12,9 @@ let light;
 let bgColor =  [{r : 180, g : 255, b : 200},
                 {r : 255, g : 120, b : 120}, 
                 {r : 60, g : 40, b : 220}];
-let skyColor = [{r : 190, g : 190, b : 215},
-                {r : 200, g : 160, b : 160}, 
-                {r : 20, g : 20, b : 120}];
+let skyColor = [{r : 170, g : 180, b : 230},
+                {r : 200, g : 90, b : 40}, 
+                {r : 30, g : 20, b : 90}];
 let timeColorNo;
 
 /**
@@ -38,18 +38,18 @@ function drawBackground() {
 
     //draw 3 mountains randomly
     mountain(0, 80, 83, 7);
-    mountain(1, 65, 73, 10);
-    mountain(2, 45, 55, 15);  
+    mountain(1, 65, 73, 8);
+    mountain(2, 45, 53, 11);  
 
     //draw clouds
 
     //get colorIndex from currentTime
     //morning
-    if(time >= 6 && time <= 13) {
+    if(time >= 7 && time <= 15) {
         timeColorNo = 0;
     }
     //afternoon
-    else if(time > 13 && time <= 20) {
+    else if(time > 15 && time <= 20) {
         timeColorNo = 1;
     }
     //night
@@ -75,14 +75,14 @@ function update(time) {
  */
 function draw(time) {
     //bg
-    let grd = context.createLinearGradient(0, 600, 0, 0);
+    let grd = context.createLinearGradient(0, 500, 0, 0);
     grd.addColorStop(0, "rgb("+(skyColor[timeColorNo].r+40)+","+(skyColor[timeColorNo].g+40)+","+(skyColor[timeColorNo].b+40)+")");
     grd.addColorStop(1, "rgb("+skyColor[timeColorNo].r+","+skyColor[timeColorNo].g+","+skyColor[timeColorNo].b+")");
     context.fillStyle = grd;
     context.fillRect(0,0,800,500);
     //mountain
     for(i=mountains.length-1; i >=0 ; i--) {
-        context.fillStyle = makeFadeColor(i+2, mountain.length+7, bgColor[timeColorNo].r, bgColor[timeColorNo].g, bgColor[timeColorNo].b);
+        context.fillStyle = makeFadeColor(i+4, mountain.length+8, bgColor[timeColorNo].r, bgColor[timeColorNo].g, bgColor[timeColorNo].b);
         context.beginPath();
         context.moveTo(0, canvas.height);
         for(j=0; j<mountains[i].peaks.length; j++) {
@@ -102,7 +102,8 @@ function draw(time) {
  * Create mountain
  */
 function mountain(idx, top, bottom, range) {
-    let peakCnt = Math.floor((Math.random() * 10) + 5);
+    let peakCnt = Math.floor((Math.random() * (document.body.clientWidth / 200)) + (document.body.clientWidth / 200));
+    if(peakCnt < 1) peakCnt = 1;
     let peaks = [];
     let volleys = [];
     for(i=0; i<peakCnt; i++)
@@ -187,6 +188,5 @@ function cloud() {
     let gg = Math.floor(g * grgr);
     let bb = Math.floor(b * grgr);
 
-    console.log(rr, gg, bb, grgr, gray);
     return "#" + rr + gg + bb;
  }
