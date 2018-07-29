@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Gothic+A1');
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
 
 html, body {
     margin:0;
     padding:0;
     width:100vw;
     height:100vh;
-    font-family: 'Gothic A1', sans-serif;
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 html {
@@ -242,6 +243,7 @@ footer {
 /* Description page table */
 table.desc {
     border:0; margin:0;
+    font-family: 'Gothic A1';
 }
 table.desc td.tb_year {
     width:80px;
