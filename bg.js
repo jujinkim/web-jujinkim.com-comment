@@ -71,7 +71,7 @@ function drawBackground() {
     //if in the night, draw moon and star
     else if(timeColorNo == 2) {
         //generate stars
-        let starCnt = document.body.clientWidth / 10;
+        let starCnt = window.innerWidth / 10;
         star(starCnt);
     }
 
@@ -80,7 +80,7 @@ function drawBackground() {
 }
 
 function update(time) {
-    //requestAnimationFrame(update);
+    requestAnimationFrame(update);
     draw(time);
 }
 
@@ -96,9 +96,16 @@ function draw(time) {
     context.fillRect(0,0,WIDTH,HEIGHT-100);
 
     //star
-    for(i=0; i < stars.length; i++) {
-        context.fillStyle = "#FFFFCA";
-        context.fillRect(stars[i].left, stars[i].top, stars[i].size, stars[i].size);
+    if(timeColorNo == 2) {
+        for(i=0; i < stars.length; i++) {
+            context.fillStyle = "#FFFFCA";
+            context.fillRect(stars[i].left, stars[i].top, stars[i].size, stars[i].size);
+            //move stars
+            stars[i].left += stars[i].size*0.01;
+            if(stars[i].left > WIDTH) {
+                stars[i].left = WIDTH - stars[i].left - stars[i].size;
+            }
+        }
     }
 
     //mountain
@@ -124,7 +131,7 @@ function draw(time) {
  * Create mountain
  */
 function mountain(idx, top, bottom, range) {
-    let peakCnt = Math.floor((Math.random() * (document.body.clientWidth / 200)) + (document.body.clientWidth / 200));
+    let peakCnt = Math.floor((Math.random() * (window.innerWidth / 200)) + (window.innerWidth / 200));
     if(peakCnt < 1) peakCnt = 1;
     let peaks = [];
     let volleys = [];
