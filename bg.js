@@ -24,6 +24,10 @@ let timeColorNo;
  * Draw background
  */
 function drawBackground() {
+    //set canvas size (default is 800x600 but will be overwritten)
+    WIDTH = window.innerWidth * 0.7;
+    HEIGHT = window.innerHeight * 0.7;
+
     //get canvas context
     canvas = document.getElementById("canvasBg");
     canvas.width = WIDTH;
@@ -40,9 +44,9 @@ function drawBackground() {
     let time = new Date().getHours();
 
     //draw 3 mountains randomly
-    mountain(0, 80, 83, 7);
-    mountain(1, 65, 73, 8);
-    mountain(2, 45, 53, 11);  
+    mountain(0, 70, 80, 7);
+    mountain(1, 58, 70, 8);
+    mountain(2, 45, 58, 9);  
 
     //draw clouds
 
@@ -131,7 +135,7 @@ function draw(time) {
  * Create mountain
  */
 function mountain(idx, top, bottom, range) {
-    let peakCnt = Math.floor((Math.random() * (window.innerWidth / 200)) + (window.innerWidth / 200));
+    let peakCnt = Math.floor((Math.random() * (window.innerWidth / 250)) + (window.innerWidth / 250));
     if(peakCnt < 1) peakCnt = 1;
     let peaks = [];
     let volleys = [];
