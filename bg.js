@@ -1,6 +1,9 @@
 /*
 JujinKim.com dynamic background script
 */
+let WIDTH = 800;
+let HEIGHT = 600;
+
 let canvas;
 let context;
 
@@ -23,8 +26,8 @@ let timeColorNo;
 function drawBackground() {
     //get canvas context
     canvas = document.getElementById("canvasBg");
-    canvas.width = 800;
-    canvas.height = 600;
+    canvas.width = WIDTH;
+    canvas.height = HEIGHT;
     context = canvas.getContext("2d");
     
     //setting canvas
@@ -57,9 +60,20 @@ function drawBackground() {
         timeColorNo = 2;
     }
 
-    //if in the day, draw sun
-    //if in the night, draw moon and star
+    //if in the day, draw sun and clouds
+    if (timeColorNo == 0) {
 
+    }
+    //if in the afternoon, draw sun
+    else if (timeColorNo == 1) {
+
+    }
+    //if in the night, draw moon and star
+    else if(timeColorNo == 2) {
+        //generate stars
+        let starCnt = document.body.clientWidth / 10;
+        star(starCnt);
+    }
 
     //draw
     update(0);
@@ -75,11 +89,18 @@ function update(time) {
  */
 function draw(time) {
     //bg
-    let grd = context.createLinearGradient(0, 500, 0, 0);
+    let grd = context.createLinearGradient(0, HEIGHT-100, 0, 0);
     grd.addColorStop(0, "rgb("+(skyColor[timeColorNo].r+40)+","+(skyColor[timeColorNo].g+40)+","+(skyColor[timeColorNo].b+40)+")");
     grd.addColorStop(1, "rgb("+skyColor[timeColorNo].r+","+skyColor[timeColorNo].g+","+skyColor[timeColorNo].b+")");
     context.fillStyle = grd;
-    context.fillRect(0,0,800,500);
+    context.fillRect(0,0,WIDTH,HEIGHT-100);
+
+    //star
+    for(i=0; i < stars.length; i++) {
+        context.fillStyle = "#FFFFCA";
+        context.fillRect(stars[i].left, stars[i].top, stars[i].size, stars[i].size);
+    }
+
     //mountain
     for(i=mountains.length-1; i >=0 ; i--) {
         context.fillStyle = makeFadeColor(i+4, mountain.length+8, bgColor[timeColorNo].r, bgColor[timeColorNo].g, bgColor[timeColorNo].b);
@@ -96,6 +117,7 @@ function draw(time) {
         context.fill();
 
     }
+
 }
 
 /**
@@ -143,8 +165,10 @@ function cloud() {
   */
  function star(count) {
     for(i = 0; i < count; i++) {
-        star[i] = {x:Math.random() * 100, y:Math.random() * 100, velocity:Math.random * 5};
-    } 
+        stars[i] = {left : Math.floor((Math.random() * WIDTH)),
+                    top : Math.floor((Math.random() * HEIGHT-100)),
+                    size : Math.random() * 1 + 1}
+        }
  }
 
  /**
