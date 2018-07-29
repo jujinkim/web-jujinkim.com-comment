@@ -12,7 +12,7 @@ let stars = [];
 let clouds = [];
 let light;
 
-let bgColor =  [{r : 180, g : 255, b : 200},
+let bgColor =  [{r : 230, g : 255, b : 220},
                 {r : 255, g : 120, b : 120}, 
                 {r : 60, g : 40, b : 220}];
 let skyColor = [{r : 170, g : 180, b : 230},
@@ -51,6 +51,7 @@ function drawBackground() {
     //draw clouds
 
     //get colorIndex from currentTime
+    time = 8;
     //morning
     if(time >= 7 && time <= 15) {
         timeColorNo = 0;
