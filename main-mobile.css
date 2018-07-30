@@ -107,3 +107,9 @@ table.desc tr.tb_space {
 main article {
     padding-left:5px;
 }
+
+/* Comment */
+div#comment_wrapper {
+    width: calc(100% - 30px);
+    left : 15px;
+}

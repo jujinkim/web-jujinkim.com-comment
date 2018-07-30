@@ -93,6 +93,18 @@ function navButton_OnClick(elem) {
 }
 
 /**
+ * Tobble comments
+ */
+function toggleComment() {
+    let wrapper = document.getElementById("comment_wrapper");
+    if(wrapper.classList.contains("open")) {
+        wrapper.classList.replace("open", "close");
+    } else if (wrapper.classList.contains("close")) {
+        wrapper.classList.replace("close", "open");
+    }
+}
+
+/**
  * Initialize
  */
 function initialize() {
