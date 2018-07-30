@@ -311,3 +311,8 @@ div#comment_toggle {
     text-align:center;
     color:rgba(0, 0, 0, 0.6);
 }
+
+div#comment_content {
+    height:calc(100% - 25px);
+    overflow-y: scroll;
+}

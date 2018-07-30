@@ -19,6 +19,8 @@
     <link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="main-mobile.css" />
     <link rel="stylesheet" type="text/css" media="screen and (min-width: 601px)" href="main-desktop.css" />
 
+    <meta property="fb:admins" content="jujinjujinjujin"/>
+
     <script src="main.js"></script>
     <script src="bg.js"></script>
 </head>
@@ -46,15 +48,18 @@
     
     <!-- Comment section -->
     <div id="comment_wrapper" class="close">
-        <div id="comment_toggle" onclick="toggleComment()">Say Hello using Facebook</div>
-        <div class="fb-comments" data-href="https://jujinkim.com" data-width="100%" data-numposts="5"></div>        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.1';
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+        <div id="comment_toggle" onclick="toggleComment()">Say Hello using Facebook [<span class="fb-comments-count" data-href="https://jujinkim.com"></span>]</div>
+        <div id="comment_content">
+            <div class="fb-comments" data-href="https://jujinkim.com" data-width="100%" data-numposts="5"></div>
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.1';
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+        </div>
     </div>
     
     <footer>
