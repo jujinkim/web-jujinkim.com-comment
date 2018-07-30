@@ -101,7 +101,7 @@ function drawBackground() {
 }
 
 function update(time) {
-    requestAnimationFrame(update);
+    //requestAnimationFrame(update);
     draw(time);
 }
 
