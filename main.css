@@ -286,7 +286,7 @@ div#comment_wrapper {
     transition: height 0.3s;
 
     position:fixed;
-    right:0;
+    right:15px;
     bottom:0;
     width: 500px;
     border-top-left-radius: 20px;
