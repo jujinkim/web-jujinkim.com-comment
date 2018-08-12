@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello, Jujin
-tags: [hello]
+tags: [misc, hello]
 ---
 # Hello Jujin
 
