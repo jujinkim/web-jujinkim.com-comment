@@ -1,4 +1,5 @@
 # SITE CONFIGURATION
+remote_theme: rohanchandra/type-theme
 baseurl: ""
 url: "https://blog.jujinkim.com"
 
