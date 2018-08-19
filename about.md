@@ -5,8 +5,12 @@ permalink: /about/
 feature-img: "assets/img/sample_feature_img_2.png"
 ---
 
-Type Theme is a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.
+My name is Jujin Kim, live in South Korea.  
 
-Head over to the [theme's documentation](https://rohanchandra.github.io/project/type/) for much more information about Type Theme or to install this theme on your own Jekyll site.
+I'm studying computer science, game and something else awesome technology which makes us happy.  
+I wanna learn computer science deeper. And wanna learn art such as game music composing, and illustration.
+I'm currently working for company that manufactury mobile phone and develop an android application.
 
-This file is an example of a page in Jekyll, that automatically shows up in the header navigation, you can delete or modify this file freely.
+I'm also studying english now. So all of this blog's posts are written in english. Maybe some sentences in posts are not smooth or not correct. But I'm trying to be better. Please give me right expression if you find grammatically wrong sentence. Thanks for your understanding about this.
+
+You can contact anytime if you want, I'll reply as soon as checking your message. Please use links above the blog.
