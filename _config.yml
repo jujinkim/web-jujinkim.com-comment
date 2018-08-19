@@ -12,33 +12,33 @@ theme_settings:
   description: "Jujin Kim's weblog. Welcome to OhRockInJourneyStudio" # used by search engines
 
   # Header and footer text
-  header_text: Blog.JujinKim.com
+  header_text: We think, We imagine, We create, and We make it. Together.
   header_text_feature_image:
   footer_text: >
     Copyright 2018, Jujin Kim from OhRockInJourney | Powered by GithubPage&<a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
 
   # Icons
   rss: true
-  email_address: jk012345@gmail.com
+  email_address: jujin@jujinkim.com
   behance:
   bitbucket:
   dribbble:
-  facebook:
+  facebook: "jujinjujinjujin"
   flickr:
   gitlab:
   github: "jujinkim"
   google_plus:
-  instagram:
+  instagram: "jujin__kim"
   linkedin: https://www.linkedin.com/in/jujinkim
   pinterest:
   reddit:
   soundcloud:
   stack_exchange:  # Full URL
-  steam:
+  steam: "jujinjujin"
   tumblr:
-  twitter: "twitter"
+  twitter:
   wordpress:
-  youtube:
+  youtube: "b0ks1n"
 
   # Scripts
   google_analytics: UA-54002449-5 # Tracking ID, e.g. "UA-000000-01"
