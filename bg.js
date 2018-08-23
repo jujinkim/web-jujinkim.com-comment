@@ -8,7 +8,6 @@ let canvas;
 let context;
 
 let mountains = [];
-let stars = [];
 let clouds = [];
 let light;
 
@@ -82,12 +81,8 @@ function drawBackground() {
             size : 38
         };
     }
-    //if in the night, draw moon and star
+    //if in the night, draw moon
     else if(timeColorNo == 2) {
-        //generate stars
-        let starCnt = window.innerWidth / 10;
-        star(starCnt);
-
         light = {
             left : WIDTH * 0.8,
             top : HEIGHT * 0.15,
@@ -97,37 +92,19 @@ function drawBackground() {
     }
 
     //draw
-    update(0);
-}
-
-function update(time) {
-    requestAnimationFrame(update);
-    draw(time);
+    draw();
 }
 
 /**
  * Draw
  */
-function draw(time) {
+function draw() {
     //bg
     let grd = context.createLinearGradient(0, HEIGHT-100, 0, 0);
     grd.addColorStop(0, "rgb("+(skyColor[timeColorNo].r+40)+","+(skyColor[timeColorNo].g+40)+","+(skyColor[timeColorNo].b+40)+")");
     grd.addColorStop(1, "rgb("+skyColor[timeColorNo].r+","+skyColor[timeColorNo].g+","+skyColor[timeColorNo].b+")");
     context.fillStyle = grd;
     context.fillRect(0,0,WIDTH,HEIGHT-100);
-
-    //star
-    if(timeColorNo == 2) {
-        for(i=0; i < stars.length; i++) {
-            context.fillStyle = "#FFFFCA";
-            context.fillRect(stars[i].left, stars[i].top, stars[i].size, stars[i].size);
-            //move stars
-            stars[i].left += stars[i].size*0.01;
-            if(stars[i].left > WIDTH) {
-                stars[i].left = WIDTH - stars[i].left - stars[i].size;
-            }
-        }
-    }
 
     //sunmoon
     context.fillStyle = light.color;
@@ -149,7 +126,7 @@ function draw(time) {
         context.lineTo(canvas.width, canvas.height);
         context.closePath();
         context.fill();
-
+        
     }
 
 }
@@ -186,25 +163,6 @@ function mountain(idx, top, bottom, range) {
 function cloud() {
 
 }
-
-/**
- * Create sun/moon
- */
- function sunmoon() {
-
- }
-
- /**
-  * Create stars
-  */
- function star(count) {
-    for(i = 0; i < count; i++) {
-        stars[i] = {left : Math.floor((Math.random() * WIDTH)),
-                    top : Math.floor((Math.random() * HEIGHT-100)),
-                    size : Math.random() * 1 + 1}
-        }
- }
-
  /**
   * Convert percent to px: X
   */
