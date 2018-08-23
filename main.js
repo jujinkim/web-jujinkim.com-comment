@@ -109,4 +109,5 @@ function toggleComment() {
  */
 function initialize() {
     drawBackground();
+    initDotMovingBG();
 }
