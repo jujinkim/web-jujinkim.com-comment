@@ -24,7 +24,7 @@
     /* End Settings */
 
     let dotCanvas;
-    let cotContext;
+    let dotContext;
 
     let dots = [];
     let dot = function() {
