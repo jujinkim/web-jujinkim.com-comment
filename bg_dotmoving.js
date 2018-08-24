@@ -16,8 +16,8 @@
     let cSizeFitDocSize = true;
     let cWidth = 800;
     let cHeight = 600;
-    let dotMinSize = 1;
-    let dotMaxSize = 1;
+    let dotMinSize = 3;
+    let dotMaxSize = 3;
     let dotMaxSpeed = 80;
     let dotMinSpeed = 30;
     let maxDotConnectedDist = 300;
@@ -77,7 +77,7 @@
 
     this.initDotMovingBG = function(width, height) {
         cWidth = width; cHeight = height;
-
+    
         //get canvas context
         dotCanvas = document.getElementById(dotCanvasName);
         dotCanvas.width = cWidth;
@@ -88,12 +88,16 @@
         dotContext.imageSmoothingEnabled = false;  //concept: no anti-alias
 
         if(dotCntReferDocSize) {
-            dotCount = window.innerWidth * window.innerHeight / 20000;
+            dotCount = Math.floor(window.innerWidth * window.innerHeight / 20000);
             if(dotMaxCount > 0 && dotCount > dotMaxCount) dotCount = dotMaxCount;
         }
 
+        if(trackCursor) {
+            dotCanvas.addEventListener('mousemove', setLastDotFromCursor, false);
+        }
+
         dots = [];
-        for(i=0; i<dotCount+1; i++) {   //last dot = cursor
+        for(i=0; i<=dotCount; i++) {   //last dot = cursor
             let ndot = new dot();
             ndot.init();
             dots.push(ndot);
@@ -130,28 +134,31 @@
             dotContext.fillStyle = dotColor;
             dotContext.fillRect(dots[i].x, dots[i].y, dots[i].size, dots[i].size);
 
-            for(j=i+1; j<dotCount+1; j++) {
+            for(j=i+1; j<=dotCount; j++) {
                 let dist = Math.abs(dots[i].x - dots[j].x) + Math.abs(dots[i].y - dots[j].y);
                 if(dist <= maxDotConnectedDist) {
                     let opacity = 1-(dist/maxDotConnectedDist);
                     dotContext.strokeStyle = "rgba(255,255,255,"+opacity+")";
                     dotContext.beginPath();
-                    dotContext.moveTo(dots[i].x, dots[i].y);
-                    dotContext.lineTo(dots[j].x, dots[j].y);
+                    dotContext.moveTo(dots[i].x+1, dots[i].y+1);
+                    dotContext.lineTo(dots[j].x+1, dots[j].y+1);
                     dotContext.stroke();
                 }
             }
         }
+    }
 
-        function getMousePos(canvas, evt) {
-            var rect = canvas.getBoundingClientRect(), // abs. size of element
-                scaleX = canvas.width / rect.width,    // relationship bitmap vs. element for X
-                scaleY = canvas.height / rect.height;  // relationship bitmap vs. element for Y
+
+    function setLastDotFromCursor(evt) {
+        var rect = dotCanvas.getBoundingClientRect(), // abs. size of element
+            scaleX = dotCanvas.width / rect.width,    // relationship bitmap vs. element for X
+            scaleY = dotCanvas.height / rect.height;  // relationship bitmap vs. element for Y
+    
         
-            return {
-            x: (evt.clientX - rect.left) * scaleX,   // scale mouse coordinates after they have
-            y: (evt.clientY - rect.top) * scaleY     // been adjusted to be relative to element
-            }
-        }
+        let x = (evt.clientX - rect.left) * scaleX;   // scale mouse coordinates after they have
+        let y = (evt.clientY - rect.top) * scaleY;     // been adjusted to be relative to element
+        dots[dotCount].x = x;
+        dots[dotCount].y = y;
+        
     }
 }
