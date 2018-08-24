@@ -107,7 +107,9 @@ function toggleComment() {
 /**
  * Initialize
  */
+let dotMovBG;
 function initialize() {
     drawBackground();
-    initDotMovingBG();
+    dotMovBG = new dotMovingBG();
+    dotMovBG.initDotMovingBG();
 }
