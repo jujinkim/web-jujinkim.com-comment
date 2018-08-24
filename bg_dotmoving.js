@@ -8,7 +8,7 @@
     /* SETTINGS */
     let dotCntReferDocSize = true;
     let dotCount = 50;
-    let dotMaxCount = 50;
+    let dotMaxCount = 100;
     let dotColor = "#ffffff";
     let dotConnected = true;
     let trackCursor = true;
@@ -18,9 +18,9 @@
     let cHeight = 600;
     let dotMinSize = 1;
     let dotMaxSize = 1;
-    let dotMaxSpeed = 50;
+    let dotMaxSpeed = 80;
     let dotMinSpeed = 30;
-    let maxDotConnectedDist = 100;
+    let maxDotConnectedDist = 300;
     /* End Settings */
 
     let dotCanvas;
@@ -36,13 +36,13 @@
                 case 0:
                     // top
                     this.x = Math.random() * cWidth;
-                    this.y = -dotMaxSize;
+                    this.y = -dotMaxSize - cHeight*0.1;
                     this.vx = Math.random() * dotMaxSpeed * 2 - (dotMaxSpeed);
                     this.vy = Math.random() * (dotMaxSpeed - dotMinSpeed) + dotMinSpeed;
                 break;
                 case 1:
                     // right
-                    this.x = cHeight + dotMaxSize;
+                    this.x = cWidth + dotMaxSize + cWidth*0.1;
                     this.y = Math.random() * cHeight;
                     this.vx = Math.random() * (dotMaxSpeed - dotMinSpeed) + dotMinSpeed * -1;
                     this.vy = Math.random() * dotMaxSpeed * 2 - (dotMaxSpeed);
@@ -50,13 +50,13 @@
                 case 2:
                     // bottom
                     this.x = Math.random() * cWidth;
-                    this.y = cHeight;
+                    this.y = cHeight + cHeight * 0.1;
                     this.vx = Math.random() * dotMaxSpeed * 2 - (dotMaxSpeed);
                     this.vy = Math.random() * (dotMaxSpeed - dotMinSpeed) + dotMinSpeed * -1;
                 break;
                 case 3:
                     // left
-                    this.x = -dotMaxSize;
+                    this.x = -dotMaxSize - cWidth * 0.1;
                     this.y = Math.random() * cHeight;
                     this.vx = Math.random() * (dotMaxSpeed - dotMinSpeed) + dotMinSpeed;
                     this.vy = Math.random() * dotMaxSpeed * 2 - (dotMaxSpeed);
@@ -66,13 +66,18 @@
         this.move = function(deltaTime) {
             this.x += this.vx * deltaTime;
             this.y += this.vy * deltaTime;
-            if(this.x < dotMaxSize*5 || this.x >= cWidth + dotMaxSize*5 || this.y < dotMaxSize*5 || this.y >= cHeight + dotMaxSize*5) {
+            if(this.x < -dotMaxSize - cWidth*0.1 || 
+                this.x >= cWidth + dotMaxSize + cWidth * 0.1 || 
+                this.y < -dotMaxSize - cHeight*0.1 || 
+                this.y >= cHeight + dotMaxSize + cHeight * 0.1) {
                 this.init();
             }
         }
     }
 
-    this.initDotMovingBG = function() {
+    this.initDotMovingBG = function(width, height) {
+        cWidth = width; cHeight = height;
+
         //get canvas context
         dotCanvas = document.getElementById(dotCanvasName);
         dotCanvas.width = cWidth;
