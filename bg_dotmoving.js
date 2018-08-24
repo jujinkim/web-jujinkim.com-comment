@@ -134,15 +134,17 @@
             dotContext.fillStyle = dotColor;
             dotContext.fillRect(dots[i].x, dots[i].y, dots[i].size, dots[i].size);
 
-            for(j=i+1; j<=dotCount; j++) {
-                let dist = Math.abs(dots[i].x - dots[j].x) + Math.abs(dots[i].y - dots[j].y);
-                if(dist <= maxDotConnectedDist) {
-                    let opacity = 1-(dist/maxDotConnectedDist);
-                    dotContext.strokeStyle = "rgba(255,255,255,"+opacity+")";
-                    dotContext.beginPath();
-                    dotContext.moveTo(dots[i].x+1, dots[i].y+1);
-                    dotContext.lineTo(dots[j].x+1, dots[j].y+1);
-                    dotContext.stroke();
+            if(dotConnected) {
+                for(j=i+1; j<=dotCount; j++) {
+                    let dist = Math.abs(dots[i].x - dots[j].x) + Math.abs(dots[i].y - dots[j].y);
+                    if(dist <= maxDotConnectedDist) {
+                        let opacity = 1-(dist/maxDotConnectedDist);
+                        dotContext.strokeStyle = "rgba(255,255,255,"+opacity+")";
+                        dotContext.beginPath();
+                        dotContext.moveTo(dots[i].x+1, dots[i].y+1);
+                        dotContext.lineTo(dots[j].x+1, dots[j].y+1);
+                        dotContext.stroke();
+                    }
                 }
             }
         }
