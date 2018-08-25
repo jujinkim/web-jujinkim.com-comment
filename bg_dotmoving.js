@@ -17,7 +17,7 @@
     let cWidth = 800;
     let cHeight = 600;
     let dotMinSize = 3;
-    let dotMaxSize = 3;
+    let dotMaxSize = 4;
     let dotMaxSpeed = 80;
     let dotMinSpeed = 30;
     let maxDotConnectedDist = 300;
@@ -144,8 +144,10 @@
                         let opacity = 1-(dist/maxDotConnectedDist);
                         dotContext.strokeStyle = "rgba(255,255,255,"+opacity+")";
                         dotContext.beginPath();
-                        dotContext.moveTo(dots[i].x+1, dots[i].y+1);
-                        dotContext.lineTo(dots[j].x+1, dots[j].y+1);
+                        let lineS = dots[i].size*0.5;
+                        let lineE = dots[j].size*0.5;
+                        dotContext.moveTo(dots[i].x+lineS, dots[i].y+lineS);
+                        dotContext.lineTo(dots[j].x+lineE, dots[j].y+lineE);
                         dotContext.stroke();
                     }
                 }
