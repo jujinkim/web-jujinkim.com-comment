@@ -111,5 +111,5 @@ let dotMovBG;
 function initialize() {
     drawBackground();
     dotMovBG = new dotMovingBG();
-    dotMovBG.initDotMovingBG(window.innerWidth, window.innerHeight);
+    dotMovBG.initDotMovingBG();
 }

@@ -75,8 +75,11 @@
         }
     }
 
-    this.initDotMovingBG = function(width, height) {
-        cWidth = width; cHeight = height;
+    this.initDotMovingBG = function() {
+        if(cSizeFitDocSize) {
+            cWidth = window.innerWidth;
+            cHeight = window.innerHeight;
+        };
     
         //get canvas context
         dotCanvas = document.getElementById(dotCanvasName);
