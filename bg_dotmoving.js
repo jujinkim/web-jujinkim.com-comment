@@ -20,7 +20,7 @@
     let dotMaxSize = 4;
     let dotMaxSpeed = 80;
     let dotMinSpeed = 30;
-    let maxDotConnectedDist = 300;
+    let maxDotConnectedDist = 200;
     /* End Settings */
 
     let dotCanvas;
