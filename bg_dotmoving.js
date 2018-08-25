@@ -10,6 +10,7 @@
     let dotCount = 50;
     let dotMaxCount = 100;
     let dotColor = "#ffffff";
+    let userDotColor = "#fdfd88"
     let dotConnected = true;
     let trackCursor = true;
     let dotCanvasName = "canvasDotBg";
@@ -75,6 +76,7 @@
         }
     }
 
+    // Initialize
     this.initDotMovingBG = function() {
         if(cSizeFitDocSize) {
             cWidth = window.innerWidth;
@@ -153,9 +155,13 @@
                 }
             }
         }
+
+        // draw user dot
+        dotContext.fillStyle = userDotColor;
+        dotContext.fillRect(dots[dotCount].x, dots[dotCount].y, dots[dotCount].size, dots[dotCount].size);
     }
 
-
+    // Get Cursor's position to set cursor dot pos
     function setLastDotFromCursor(evt) {
         var rect = dotCanvas.getBoundingClientRect(), // abs. size of element
             scaleX = dotCanvas.width / rect.width,    // relationship bitmap vs. element for X
@@ -164,8 +170,8 @@
         
         let x = (evt.clientX - rect.left) * scaleX;   // scale mouse coordinates after they have
         let y = (evt.clientY - rect.top) * scaleY;     // been adjusted to be relative to element
-        dots[dotCount].x = x;
-        dots[dotCount].y = y;
+        dots[dotCount].x = x - dots[dotCount].size*0.5;
+        dots[dotCount].y = y - dots[dotCount].size*0.5;;
         
     }
 }
