@@ -72,7 +72,7 @@ class DotMovingBG {
         this.dots = [];
         for (var i = 0; i <= DMBG.dotCount; i++) { //last dot = cursor
             let ndot = new Dot();
-            ndot.init();
+            ndot.init(true);
             this.dots.push(ndot);
         }
         this.update();
@@ -168,21 +168,24 @@ class Dot {
         this.size;
     }
 
-    // Initialize;
-    init() {
+    /**
+     * Initialize dot
+     * @param {bool} locTotalRandom if true, dot's location is spreaded 'inside' of canvas
+     */
+    init(locTotalRandom) {
         this.size = Math.random() * (DMBG.dotMaxSize - DMBG.dotMinSize) + DMBG.dotMinSize;
         let startLine = Math.floor(Math.random() * 4);
         switch (startLine) {
             case 0:
                 // top
                 this.x = Math.random() * DMBG.cWidth;
-                this.y = -DMBG.dotMaxSize - DMBG.cHeight * 0.1;
+                this.y = locTotalRandom ? Math.random() * DMBG.cHeight : -DMBG.dotMaxSize - DMBG.cHeight * 0.1;
                 this.vx = Math.random() * DMBG.dotMaxSpeed * 2 - (DMBG.dotMaxSpeed);
                 this.vy = Math.random() * (DMBG.dotMaxSpeed - DMBG.dotMinSpeed) + DMBG.dotMinSpeed;
                 break;
             case 1:
                 // right
-                this.x = DMBG.cWidth + DMBG.dotMaxSize + DMBG.cWidth * 0.1;
+                this.x = locTotalRandom ? Math.random() * DMBG.cWidth : DMBG.cWidth + DMBG.dotMaxSize + DMBG.cWidth * 0.1;
                 this.y = Math.random() * DMBG.cHeight;
                 this.vx = Math.random() * (DMBG.dotMaxSpeed - DMBG.dotMinSpeed) + DMBG.dotMinSpeed * -1;
                 this.vy = Math.random() * DMBG.dotMaxSpeed * 2 - (DMBG.dotMaxSpeed);
@@ -190,13 +193,13 @@ class Dot {
             case 2:
                 // bottom
                 this.x = Math.random() * DMBG.cWidth;
-                this.y = DMBG.cHeight + DMBG.cHeight * 0.1;
+                this.y = locTotalRandom ? Math.random() * DMBG.cHeight : DMBG.cHeight + DMBG.cHeight * 0.1;
                 this.vx = Math.random() * DMBG.dotMaxSpeed * 2 - (DMBG.dotMaxSpeed);
                 this.vy = Math.random() * (DMBG.dotMaxSpeed - DMBG.dotMinSpeed) + DMBG.dotMinSpeed * -1;
                 break;
             case 3:
                 // left
-                this.x = -DMBG.dotMaxSize - DMBG.cWidth * 0.1;
+                this.x = locTotalRandom ? Math.random() * DMBG.cWidth : -DMBG.dotMaxSize - DMBG.cWidth * 0.1;
                 this.y = Math.random() * DMBG.cHeight;
                 this.vx = Math.random() * (DMBG.dotMaxSpeed - DMBG.dotMinSpeed) + DMBG.dotMinSpeed;
                 this.vy = Math.random() * DMBG.dotMaxSpeed * 2 - (DMBG.dotMaxSpeed);
@@ -212,7 +215,7 @@ class Dot {
             this.x >= DMBG.cWidth + DMBG.dotMaxSize + DMBG.cWidth * 0.1 ||
             this.y < -DMBG.dotMaxSize - DMBG.cHeight * 0.1 ||
             this.y >= DMBG.cHeight + DMBG.dotMaxSize + DMBG.cHeight * 0.1) {
-            this.init();
+            this.init(false);
         }
     };
     
