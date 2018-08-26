@@ -51,6 +51,11 @@ class DotMovingBG {
         
         //get canvas context
         this.dotCanvas = document.getElementById(DMBG.dotCanvasName);
+        if(this.dotCanvas == null || this.dotCanvas == undefined) {
+            this.dotCanvas = document.createElement('canvas');
+            document.body.appendChild(this.dotCanvas);
+            this.dotCanvas.setAttribute("id", "canvasDotBg");
+        }
         this.dotCanvas.width = DMBG.cWidth;
         this.dotCanvas.height = DMBG.cHeight;
         this.dotContext = this.dotCanvas.getContext("2d");
@@ -196,19 +201,19 @@ class Dot {
                 this.vx = Math.random() * (DMBG.dotMaxSpeed - DMBG.dotMinSpeed) + DMBG.dotMinSpeed;
                 this.vy = Math.random() * DMBG.dotMaxSpeed * 2 - (DMBG.dotMaxSpeed);
                 break;
-            }
         }
-        
-        // Move dot
-        move(deltaTime) {
-            this.x += this.vx * deltaTime;
-            this.y += this.vy * deltaTime;
-            if (this.x < -DMBG.dotMaxSize - DMBG.cWidth * 0.1 ||
-                this.x >= DMBG.cWidth + DMBG.dotMaxSize + DMBG.cWidth * 0.1 ||
-                this.y < -DMBG.dotMaxSize - DMBG.cHeight * 0.1 ||
-                this.y >= DMBG.cHeight + DMBG.dotMaxSize + DMBG.cHeight * 0.1) {
-                this.init();
-            }
-        };
+    }
+    
+    // Move dot
+    move(deltaTime) {
+        this.x += this.vx * deltaTime;
+        this.y += this.vy * deltaTime;
+        if (this.x < -DMBG.dotMaxSize - DMBG.cWidth * 0.1 ||
+            this.x >= DMBG.cWidth + DMBG.dotMaxSize + DMBG.cWidth * 0.1 ||
+            this.y < -DMBG.dotMaxSize - DMBG.cHeight * 0.1 ||
+            this.y >= DMBG.cHeight + DMBG.dotMaxSize + DMBG.cHeight * 0.1) {
+            this.init();
+        }
+    };
     
 }
