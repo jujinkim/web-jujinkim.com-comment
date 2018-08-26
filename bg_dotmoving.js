@@ -18,7 +18,7 @@ DMBG.dotCanvasName = "canvasDotBg";
 DMBG.cSizeFitDocSize = true;
 DMBG.cWidth = 800;
 DMBG.cHeight = 600;
-DMBG.dotMinSize = 3;
+DMBG.dotMinSize = 2;
 DMBG.dotMaxSize = 4;
 DMBG.dotMaxSpeed = 80;
 DMBG.dotMinSpeed = 30;
@@ -92,7 +92,10 @@ class DotMovingBG {
         // draw dot and line
         for (i = 0; i < DMBG.dotCount; i++) {
             this.dotContext.fillStyle = DMBG.dotColor;
-            this.dotContext.fillRect(this.dots[i].x, this.dots[i].y, this.dots[i].size, this.dots[i].size);
+            this.dotContext.beginPath();
+            this.dotContext.arc(this.dots[i].x, this.dots[i].y, this.dots[i].size, 0, Math.PI*2);
+            this.dotContext.fill();
+            //this.dotContext.fillRect(this.dots[i].x, this.dots[i].y, this.dots[i].size, this.dots[i].size);
             if (DMBG.dotConnected) {
                 for (j = i + 1; j <= DMBG.dotCount; j++) {
                     let dist = Math.abs(this.dots[i].x - this.dots[j].x) + Math.abs(this.dots[i].y - this.dots[j].y);
@@ -100,10 +103,8 @@ class DotMovingBG {
                         let opacity = 1 - (dist / DMBG.maxDotConnectedDist);
                         this.dotContext.strokeStyle = DotMovingBG.toRGBAfromCode(DMBG.dotColor, opacity);
                         this.dotContext.beginPath();
-                        let lineS = this.dots[i].size * 0.5;
-                        let lineE = this.dots[j].size * 0.5;
-                        this.dotContext.moveTo(this.dots[i].x + lineS, this.dots[i].y + lineS);
-                        this.dotContext.lineTo(this.dots[j].x + lineE, this.dots[j].y + lineE);
+                        this.dotContext.moveTo(this.dots[i].x, this.dots[i].y);
+                        this.dotContext.lineTo(this.dots[j].x, this.dots[j].y);
                         this.dotContext.stroke();
                     }
                 }
@@ -112,10 +113,12 @@ class DotMovingBG {
 
         // draw user dot
         this.dotContext.fillStyle = DMBG.userDotColor;
-        this.dotContext.fillRect(this.dots[DMBG.dotCount].x, 
-                                this.dots[DMBG.dotCount].y, 
-                                this.dots[DMBG.dotCount].size, 
-                                this.dots[DMBG.dotCount].size);
+        this.dotContext.beginPath();
+        this.dotContext.arc(this.dots[DMBG.dotCount].x, 
+                            this.dots[DMBG.dotCount].y, 
+                            this.dots[DMBG.dotCount].size, 
+                            0, Math.PI*2);
+        this.dotContext.fill();
     }
     
     /** Get Cursor's position to set cursor dot pos */
