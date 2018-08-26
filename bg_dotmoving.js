@@ -46,7 +46,6 @@ class DotMovingBG {
                 DMBG.cHeight = window.innerHeight;
                 this.dotCanvas.width = DMBG.cWidth;
                 this.dotCanvas.height = DMBG.cHeight;
-                console.log('resizzzz');
             }.bind(this), false);
         }
         
@@ -99,7 +98,7 @@ class DotMovingBG {
                     let dist = Math.abs(this.dots[i].x - this.dots[j].x) + Math.abs(this.dots[i].y - this.dots[j].y);
                     if (dist <= DMBG.maxDotConnectedDist) {
                         let opacity = 1 - (dist / DMBG.maxDotConnectedDist);
-                        this.dotContext.strokeStyle = "rgba(255,255,255," + opacity + ")";
+                        this.dotContext.strokeStyle = DotMovingBG.toRGBAfromCode(DMBG.dotColor, opacity);
                         this.dotContext.beginPath();
                         let lineS = this.dots[i].size * 0.5;
                         let lineE = this.dots[j].size * 0.5;
@@ -128,6 +127,27 @@ class DotMovingBG {
         let y = (evt.clientY - rect.top) * scaleY; // been adjusted to be relative to element
         this.dots[DMBG.dotCount].x = x - this.dots[DMBG.dotCount].size * 0.5;
         this.dots[DMBG.dotCount].y = y - this.dots[DMBG.dotCount].size * 0.5;
+    }
+
+    /**
+     * Return "rgba(r, g, b, a)" from "#rrggbb" 
+     * @param {string} colorCode #rrggbb
+     * @param {float} opacity 0 to 1
+     * @returns if success to convert. returns "rgba(r, g, b, a)", but fails, return colorCode.
+     */
+    static toRGBAfromCode(colorCode, opacity) {
+        let rgba;
+        let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(colorCode);
+        let res = result ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16)
+        } : null;
+
+        if(res == null) return colorCode;
+        
+        rgba = "rgba(" + res.r + "," + res.g + ", " + res.b + ", " + opacity + ")";
+        return rgba;
     }
 }
 
