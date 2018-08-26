@@ -40,6 +40,14 @@ class DotMovingBG {
         if (DMBG.cSizeFitDocSize) {
             DMBG.cWidth = window.innerWidth;
             DMBG.cHeight = window.innerHeight;
+
+            window.addEventListener('resize', function() {
+                DMBG.cWidth = window.innerWidth;
+                DMBG.cHeight = window.innerHeight;
+                this.dotCanvas.width = DMBG.cWidth;
+                this.dotCanvas.height = DMBG.cHeight;
+                console.log('resizzzz');
+            }.bind(this), false);
         }
         
         //get canvas context
