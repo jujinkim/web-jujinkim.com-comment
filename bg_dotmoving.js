@@ -55,7 +55,7 @@ class DotMovingBG {
             DMBG.dotCount = DMBG.dotMaxCount;
         }
         if (DMBG.trackCursor) {
-            this.dotCanvas.addEventListener('mousemove', this.setLastDotFromCursor.bind(this), false);
+            document.addEventListener('mousemove', this.setLastDotFromCursor.bind(this), false);
         }
         this.dots = [];
         for (i = 0; i <= DMBG.dotCount; i++) { //last dot = cursor
