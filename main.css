@@ -247,7 +247,7 @@ table.desc {
 }
 table.desc td.tb_year {
     width:80px;
-    color:darkred;
+    color:rgb(70, 70, 70);
     font-size:0.7em;
     padding:6px;
     vertical-align: top;
@@ -256,7 +256,7 @@ table.desc td.tb_year {
 table.desc td.tb_year span {
     width:100%;
     display:inline-block;
-    border-right: 1px solid darkred;
+    border-right: 1px solid rgb(70,70,70);
 }
 table.desc td.tb_desc {
     padding-left:20px;
