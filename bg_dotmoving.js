@@ -10,8 +10,8 @@ class DMBG {
 DMBG.dotCntReferDocSize = true;
 DMBG.dotCount = 50;
 DMBG.dotMaxCount = 100;
-DMBG.dotColor = "#ffffff";
-DMBG.userDotColor = "#fdfd88";
+DMBG.dotColor = "#666666";
+DMBG.userDotColor = "#ffffff";
 DMBG.dotConnected = true;
 DMBG.trackCursor = true;
 DMBG.dotCanvasName = "canvasDotBg";
@@ -70,7 +70,7 @@ class DotMovingBG {
             document.addEventListener('mousemove', this.setLastDotFromCursor.bind(this), false);
         }
         this.dots = [];
-        for (i = 0; i <= DMBG.dotCount; i++) { //last dot = cursor
+        for (var i = 0; i <= DMBG.dotCount; i++) { //last dot = cursor
             let ndot = new Dot();
             ndot.init(true);
             this.dots.push(ndot);
@@ -84,7 +84,7 @@ class DotMovingBG {
         let deltaTime = frameTime - this.lastFrameTime;
         deltaTime = deltaTime * 0.001;
         // move dots
-        for (i = 0; i < DMBG.dotCount; i++) {
+        for (var i = 0; i < DMBG.dotCount; i++) {
             this.dots[i].move(deltaTime);
         }
         this.draw();
@@ -95,14 +95,14 @@ class DotMovingBG {
     draw() {
         this.dotContext.clearRect(0, 0, this.dotCanvas.width, this.dotCanvas.height);
         // draw dot and line
-        for (i = 0; i < DMBG.dotCount; i++) {
+        for (var i = 0; i < DMBG.dotCount; i++) {
             this.dotContext.fillStyle = DMBG.dotColor;
             this.dotContext.beginPath();
             this.dotContext.arc(this.dots[i].x, this.dots[i].y, this.dots[i].size, 0, Math.PI*2);
             this.dotContext.fill();
             //this.dotContext.fillRect(this.dots[i].x, this.dots[i].y, this.dots[i].size, this.dots[i].size);
             if (DMBG.dotConnected) {
-                for (j = i + 1; j <= DMBG.dotCount; j++) {
+                for (var j = i + 1; j <= DMBG.dotCount; j++) {
                     let dist = Math.abs(this.dots[i].x - this.dots[j].x) + Math.abs(this.dots[i].y - this.dots[j].y);
                     if (dist <= DMBG.maxDotConnectedDist) {
                         let opacity = 1 - (dist / DMBG.maxDotConnectedDist);

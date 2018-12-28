@@ -7,18 +7,6 @@ let HEIGHT = 600;
 let canvas;
 let context;
 
-let mountains = [];
-let clouds = [];
-let light;
-
-let bgColor =  [{r : 230, g : 255, b : 220},
-                {r : 255, g : 120, b : 120}, 
-                {r : 60, g : 40, b : 220}];
-let skyColor = [{r : 170, g : 180, b : 230},
-                {r : 200, g : 90, b : 40}, 
-                {r : 30, g : 20, b : 90}];
-let timeColorNo;
-
 /**
  * Draw background
  */
@@ -38,59 +26,6 @@ function drawBackground() {
 
     context.clearRect(0, 0, canvas.width, canvas.height);
 
-
-    //get current time
-    let time = new Date().getHours();
-
-    //draw 3 mountains randomly
-    mountain(0, 70, 75, 7);
-    mountain(1, 58, 67, 8);
-    mountain(2, 37, 53, 10);  
-
-    //draw clouds
-
-    //get colorIndex from currentTime
-    //morning
-    if(time >= 7 && time <= 15) {
-        timeColorNo = 0;
-    }
-    //afternoon
-    else if(time > 15 && time <= 20) {
-        timeColorNo = 1;
-    }
-    //night
-    else {
-        timeColorNo = 2;
-    }
-
-    //if in the day, draw sun and clouds
-    if (timeColorNo == 0) {
-        light = {
-            left : WIDTH * 0.8,
-            top : HEIGHT * 0.15,
-            color : "#FFEEEE",
-            size : 35
-        };
-    }
-    //if in the afternoon, draw sun
-    else if (timeColorNo == 1) {
-        light = {
-            left : WIDTH * 0.6,
-            top : HEIGHT * 0.45,
-            color : "#FFF2C3",
-            size : 38
-        };
-    }
-    //if in the night, draw moon
-    else if(timeColorNo == 2) {
-        light = {
-            left : WIDTH * 0.8,
-            top : HEIGHT * 0.15,
-            color : "#FFF0CB",
-            size : 25
-        };
-    }
-
     //draw
     draw();
 }
@@ -100,69 +35,11 @@ function drawBackground() {
  */
 function draw() {
     //bg
-    let grd = context.createLinearGradient(0, HEIGHT-100, 0, 0);
-    grd.addColorStop(0, "rgb("+(skyColor[timeColorNo].r+40)+","+(skyColor[timeColorNo].g+40)+","+(skyColor[timeColorNo].b+40)+")");
-    grd.addColorStop(1, "rgb("+skyColor[timeColorNo].r+","+skyColor[timeColorNo].g+","+skyColor[timeColorNo].b+")");
-    context.fillStyle = grd;
-    context.fillRect(0,0,WIDTH,HEIGHT-100);
-
-    //sunmoon
-    context.fillStyle = light.color;
-    context.beginPath();
-    context.arc(light.left, light.top, light.size, 0, 2 * Math.PI, false);
-    context.fill();
-
-    //mountain
-    for(i=mountains.length-1; i >=0 ; i--) {
-        context.fillStyle = makeFadeColor(i+4, mountain.length+8, bgColor[timeColorNo].r, bgColor[timeColorNo].g, bgColor[timeColorNo].b);
-        context.beginPath();
-        context.moveTo(0, canvas.height);
-        for(j=0; j<mountains[i].peaks.length; j++) {
-            context.lineTo(pToX(mountains[i].peaks[j].x), pToY(mountains[i].peaks[j].y));
-            context.lineTo(pToX(mountains[i].volleys[j].x), pToY(mountains[i].volleys[j].y));
-        }
-        
-        context.lineTo(canvas.width, pToY(mountains[i].peaks[0].y));
-        context.lineTo(canvas.width, canvas.height);
-        context.closePath();
-        context.fill();
-        
-    }
+    context.fillStyle = "#232323";
+    context.fillRect(0,0,WIDTH,HEIGHT);
 
 }
 
-/**
- * Create mountain
- */
-function mountain(idx, top, bottom, range) {
-    let peakCnt = Math.floor((Math.random() * (window.innerWidth / 150)) + (window.innerWidth / 500));
-    if(peakCnt < 1) peakCnt = 1;
-    let peaks = [];
-    let volleys = [];
-    for(i=0; i<peakCnt; i++)
-    {
-        let px = 100/peakCnt;
-        px = px * i;
-        px = i>0?px + Math.floor((Math.random() * 30/peakCnt) - 30/peakCnt):0;
-        peaks[i] = {x:px,
-                    y:Math.floor((Math.random() * range) + top)};
-
-        let vx = 100/peakCnt;
-        vx = vx * i;
-        vx = vx + Math.floor((Math.random() * 30/peakCnt));
-        volleys[i] = {x:vx,
-                      y:Math.floor((Math.random() * range) + bottom)};
-    }
-
-    mountains[idx] = {peaks:peaks, volleys:volleys};
-}
-
-/**
- * Create clouds
- */
-function cloud() {
-
-}
  /**
   * Convert percent to px: X
   */
@@ -175,34 +52,4 @@ function cloud() {
   */
  function pToY(val) {
     return canvas.height/100*val;
- }
-
- /**
-  * Make faded color
-  * @param {integer} val level. must smaller than totalsize
-  * @param {integer} totalSize Totalsize 
-  * @return {string} Color string
-  */
- function makeFadeColor(val, totalSize, r, g, b) {
-
-    let i = Math.floor(val/totalSize*16);   //color : hex
-    i = i.toString(16);
-
-    return makeTintColor(r, g, b, i);
- }
-
- /**
-  * Make tinted color
-  * @param {integer} r 
-  * @param {integer} g 
-  * @param {integer} b 
-  * @param {integer} gray 
-  */
- function makeTintColor(r, g, b, gray) {
-    let grgr = gray / 255;
-    let rr = Math.floor(r * grgr);
-    let gg = Math.floor(g * grgr);
-    let bb = Math.floor(b * grgr);
-
-    return "#" + rr + gg + bb;
  }
