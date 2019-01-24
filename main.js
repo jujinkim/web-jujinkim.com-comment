@@ -93,22 +93,6 @@ function navButton_OnClick(elem) {
 }
 
 /**
- * Tobble comments
- */
-function toggleComment() {
-    let wrapper = document.getElementById("comment_wrapper");
-    if(wrapper.classList.contains("open")) {
-        wrapper.classList.remove("open");
-        wrapper.classList.add("close");
-        //wrapper.classList.replace("open", "close");   // 'replace' is not supported in old browser
-    } else if (wrapper.classList.contains("close")) {
-        wrapper.classList.remove("close");
-        wrapper.classList.add("open");
-        //wrapper.classList.replace("close", "open");
-    }
-}
-
-/**
  * Initialize
  */
 let dotMovBG;
