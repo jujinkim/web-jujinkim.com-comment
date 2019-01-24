@@ -50,8 +50,8 @@ function openWindow(elem) {
         case 'navCareer' :
             xhttp.open('GET', 'pages/career.html', true);
         break;
-        case 'navExp' :
-            xhttp.open('GET', 'pages/exp.html', true);
+        case 'navEtc' :
+            xhttp.open('GET', 'pages/etc.html', true);
         break;
         case 'navPrj' :
             xhttp.open('GET', 'pages/project.html', true);
