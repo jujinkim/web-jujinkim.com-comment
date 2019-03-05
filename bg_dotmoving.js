@@ -82,6 +82,7 @@ class DotMovingBG {
         window.requestAnimationFrame(this.update.bind(this));
         let frameTime = Date.now();
         let deltaTime = frameTime - this.lastFrameTime;
+        if(deltaTime > 1000) deltaTime = 0  // if page was inactivated too long(1s), ignore moving
         deltaTime = deltaTime * 0.001;
         // move dots
         for (var i = 0; i < DMBG.dotCount; i++) {
