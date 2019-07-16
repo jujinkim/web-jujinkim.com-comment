@@ -42,4 +42,19 @@
 	ga('send', 'pageview');
 	</script>
 	{% endif %}
+
+	<!-- JujinKim's movingDotBG -->
+	<script src="{{ "/assets/js/bg_dotmoving.js" | relative_url }}"></script>
+	<script>
+		let dotMovBG = new DotMovingBG();
+	</script>
+	<style>
+	canvas#canvasDotBg {
+		position:fixed;
+		left:0; top:0; margin:0; padding:0;
+		width:100%; height:100%;
+		background:transparent;
+		z-index:-1;
+	}
+</style>
 </head>
