@@ -1,5 +1,5 @@
 ---
 layout: post
-title: 1) Android Studio
+title: 4. [ASDcourse] Activity
 tags: [Android,AndroidStudio,Beginner,Develop]
 ---

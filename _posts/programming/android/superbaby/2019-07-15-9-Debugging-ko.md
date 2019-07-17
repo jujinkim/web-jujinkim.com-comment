@@ -1,5 +1,5 @@
 ---
 layout: post
-title: 1) Android Studio
+title: 9. [ASDcourse] 디버깅
 tags: [Android,AndroidStudio,Beginner,Develop]
 ---

@@ -1,5 +1,5 @@
 ---
 layout: post
-title: 1) Android Studio
+title: 8. [ASDcourse] RecyclerView
 tags: [Android,AndroidStudio,Beginner,Develop]
 ---

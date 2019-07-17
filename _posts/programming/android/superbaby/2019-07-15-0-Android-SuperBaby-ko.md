@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 0) Android SuperBaby develop course
+title: 0. Android SuperBaby develop course a.k.a ASDcourse
 tags: [Android,Beginner,Develop]
 ---
 # 안드로이드 개발 슈퍼베이비들을 위한 쾌속 특별 코스
