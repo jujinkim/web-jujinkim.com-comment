@@ -1,7 +1,7 @@
 # SITE CONFIGURATION
 baseurl: "/blog"
 url: "https://jujinkim.com"
-production_url : http://jujinkim.com/blog
+production_url : https://jujinkim.com/blog
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
