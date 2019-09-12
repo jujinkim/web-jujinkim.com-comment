@@ -1,11 +1,11 @@
 # SITE CONFIGURATION
-baseurl: ""
-url: "https://blog.jujinkim.com"
+baseurl: "/blog"
+url: "https://jujinkim.com"
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: Blog.JujinKim.com
+  title: jujinKim.com blog
   avatar: 
   favicon: assets/favicon.ico
   gravatar: b29ffe51445057ea65f5a687e8a2ac63
