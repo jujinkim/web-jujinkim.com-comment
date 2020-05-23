@@ -23,7 +23,7 @@ Personal profile webpage
 
 # contact
 
-안알려주지롱
+jujin@jujinkim.com
 
 
 Please give a STAR if you love me
