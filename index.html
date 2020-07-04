@@ -21,16 +21,10 @@
 
     <meta property="fb:admins" content="jujinjujinjujin"/>
 
-    <script src="main.js"></script>
-    <script src="bg.js"></script>
-    <script src="bg_dotmoving.js"></script>
 </head>
 <body onload="initialize()">
-    <canvas id="canvasBg"></canvas>
-    <canvas id="canvasDotBg"></canvas>
 
-    <nav id="nav" class="full fullMobile">
-        <div id="logo">JujinKim.com</div>
+    <nav id="nav">
         <ul>
             <li id="navCareer" onclick="navButton_OnClick(this)"><span>Career</span></li>
             <li id="navPrj" onclick="navButton_OnClick(this)"><span>Project</span></li>
@@ -39,14 +33,12 @@
             <li id="navLink" onclick="navButton_OnClick(this)"><span>Link</span></li>
         </ul>
     </nav>
-    <main id="main" class="close">
-        <div id="mainWindow">
-            <div id="closeMain" onclick="closeWindow_OnClick()">×</div>
-            <div id="mainArticleWrapper">
-                <article id="mainArticle"></article>
-            </div>
-            <div id="loading" class="hide">Loading..</div>
-        </div>
+    <main id="main">
+        <section id="bio" />
+        <section id="career" />
+        <section id="project" />
+        <section id="etc" />
+        <section id="link" />
     </main>        
         
     <footer>
