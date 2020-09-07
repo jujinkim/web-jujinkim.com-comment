@@ -13,7 +13,13 @@
         bottom: 0;
         height: 50px;
         overflow-x: scroll;
+    }
+
+    .light nav {
         box-shadow: 0 16px 36px #a2a2a2 !important;
+    }
+    .dark nav {
+        box-shadow: 0 16px 36px #181818 !important;
     }
 
     main {
