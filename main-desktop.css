@@ -1,3 +1,36 @@
 @media (min-width: 601px) {
+    body {
+        width: 1024px;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    nav {
+        padding: 10px;
+        margin: 20px 20px 20px 40px;
+        right: 0px;
+        top: 0px;
+        width:150px;
+        height: auto;
+        top: 0;
+        bottom: 0;
+        overflow-y: scroll;
+    }
+
+    main {
+        margin: 0px;
+        width: calc(100% - 150px);
+        height: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    nav li {
+        left: 0;
+        right: 0;
+        margin-bottom: 30px;
+        padding: 20px;
+    }
 
 }

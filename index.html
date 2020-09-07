@@ -22,9 +22,17 @@
     <meta property="fb:admins" content="jujinjujinjujin"/>
 
 </head>
-<body onload="initialize()">
+<body onload="initialize()" class="light">
 
-    <nav id="nav">
+    <main id="main">
+        <section id="bio"></section>
+        <section id="career"></section>
+        <section id="project"></section>
+        <section id="etc"></section>
+        <section id="link"></section>
+    </main>        
+        
+    <nav id="nav" class="light">
         <ul>
             <li id="navCareer" onclick="navButton_OnClick(this)"><span>Career</span></li>
             <li id="navPrj" onclick="navButton_OnClick(this)"><span>Project</span></li>
@@ -33,16 +41,5 @@
             <li id="navLink" onclick="navButton_OnClick(this)"><span>Link</span></li>
         </ul>
     </nav>
-    <main id="main">
-        <section id="bio" />
-        <section id="career" />
-        <section id="project" />
-        <section id="etc" />
-        <section id="link" />
-    </main>        
-        
-    <footer>
-        JujinKim.com
-    </footer>
 </body>
 </html>

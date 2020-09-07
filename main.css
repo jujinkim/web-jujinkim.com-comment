@@ -1,3 +1,81 @@
 html {
     overflow-y: scroll;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: auto;
+    height: 100%;
+}
+
+body.light {
+    background: #f0f0f0;
+    color: #3b3b3b;
+}
+
+body.dark {
+    background: #3b3b3b;
+    color: #f0f0f0;
+}
+
+nav {
+    border-radius: 32px;
+    display:flex;
+}
+
+.light nav {
+    background: #f0f0f0;
+    box-shadow:  12px 12px 0px #606060, 
+                 -12px -12px 0px #ffffff;
+}
+
+.dark nav {
+    background: #3b3b3b;
+    box-shadow:  12px 12px 0px #181818, 
+                 -12px -12px 0px #5e5e5e;
+}
+
+section {
+    border-radius: 36px;
+    min-height: 100px;
+    margin: 20px;
+    margin-bottom: 40px;
+}
+
+.light section {
+    background: #f0f0f0;
+    box-shadow:  12px 12px 0px #606060, 
+                 -12px -12px 0px #ffffff;
+}
+
+.dark section {
+    background: #3b3b3b;
+    box-shadow:  12px 12px 0px #181818, 
+                 -12px -12px 0px #5e5e5e;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    width: 100%;
+    margin: 6px;
+}
+
+nav li {
+    border-radius: 12px;
+}
+
+.light nav li {
+    background: #f0f0f0;
+    box-shadow:  6px 6px 0px #ffffff, 
+                 -6px -6px 0px #606060;
+}
+
+.dark nav li {
+    background: #3b3b3b;
+    box-shadow:  6px 6px 0px #5e5e5e, 
+                 -6px -6px 0px #181818;
 }
