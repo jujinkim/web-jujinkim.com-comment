@@ -1,29 +1,28 @@
+function initialize() {
+    loadSlot(document.getElementById('bio'));
+    loadSlot(document.getElementById('career'));
+    loadSlot(document.getElementById('project'));
+    loadSlot(document.getElementById('etc'));
+    loadSlot(document.getElementById('link'));
+}
+
 function loadSlot(elem) {
-    let window = document.getElementById("main");
-    window.classList.remove("close");
-    window.classList.add("open");
-
-    //show loading
-    let loading = document.getElementById("loading");
-    loading.classList.remove("hide");
-    loading.classList.add("show");
-
     //get page url
     let xhttp = new XMLHttpRequest();
     switch(elem.id) {
-        case 'navBio' :
+        case 'bio' :
             xhttp.open('GET', 'pages/bio.html', true);
         break;
-        case 'navCareer' :
+        case 'career' :
             xhttp.open('GET', 'pages/career.html', true);
         break;
-        case 'navEtc' :
+        case 'etc' :
             xhttp.open('GET', 'pages/etc.html', true);
         break;
-        case 'navPrj' :
+        case 'project' :
             xhttp.open('GET', 'pages/project.html', true);
         break;
-        case 'navLink' :
+        case 'link' :
             xhttp.open('GET', 'pages/link.html', true);
         break;
     }
@@ -31,12 +30,12 @@ function loadSlot(elem) {
     //push page when loaded
     xhttp.onreadystatechange = function() {
         if(xhttp.readyState === 4) {
-            document.getElementById('mainArticle').innerHTML = xhttp.responseText;
+            elem.innerHTML = xhttp.responseText;
         }
         //hide loading
-        let loading = document.getElementById("loading");
-        loading.classList.remove("show");
-        loading.classList.add("hide");
+        // let loading = document.getElementById("loading");
+        // loading.classList.remove("show");
+        // loading.classList.add("hide");
     }
     
     //load page
