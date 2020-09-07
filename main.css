@@ -11,13 +11,13 @@ body {
 }
 
 body.light {
-    background: #f0f0f0;
+    background: #e6e6e6;
     color: #3b3b3b;
 }
 
 body.dark {
     background: #3b3b3b;
-    color: #f0f0f0;
+    color: #e6e6e6;
 }
 
 nav {
@@ -26,15 +26,15 @@ nav {
 }
 
 .light nav {
-    background: #f0f0f0;
-    box-shadow:  12px 12px 0px #606060, 
-                 -12px -12px 0px #ffffff;
+    background: #e6e6e6;
+    box-shadow:  12px 12px 32px #c4c4c4, 
+                 -12px -12px 32px #ffffff;
 }
 
 .dark nav {
     background: #3b3b3b;
-    box-shadow:  12px 12px 0px #181818, 
-                 -12px -12px 0px #5e5e5e;
+    box-shadow:  12px 12px 32px #181818, 
+                 -12px -12px 32px #5e5e5e;
 }
 
 section {
@@ -45,15 +45,15 @@ section {
 }
 
 .light section {
-    background: #f0f0f0;
-    box-shadow:  12px 12px 0px #606060, 
-                 -12px -12px 0px #ffffff;
+    background: #e6e6e6;
+    box-shadow:  12px 12px 32px #c4c4c4, 
+                 -12px -12px 32px #ffffff;
 }
 
 .dark section {
     background: #3b3b3b;
-    box-shadow:  12px 12px 0px #181818, 
-                 -12px -12px 0px #5e5e5e;
+    box-shadow:  12px 12px 32px #181818, 
+                 -12px -12px 32px #5e5e5e;
 }
 
 nav ul {
@@ -69,13 +69,13 @@ nav li {
 }
 
 .light nav li {
-    background: #f0f0f0;
-    box-shadow:  6px 6px 0px #ffffff, 
-                 -6px -6px 0px #606060;
+    background: #e6e6e6;
+    box-shadow:  inset 6px 6px 12px #c4c4c4, 
+                 inset -6px -6px 12px #ffffff;
 }
 
 .dark nav li {
     background: #3b3b3b;
-    box-shadow:  6px 6px 0px #5e5e5e, 
-                 -6px -6px 0px #181818;
+    box-shadow:  inset 6px 6px 12px #181818, 
+                 inset -6px -6px 12px #5e5e5e;
 }
