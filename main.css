@@ -9,17 +9,23 @@ body {
     margin: auto;
     height: 100%;
 }
-
 body.light {
     background: #e6e6e6;
     color: #3b3b3b;
 }
-
 body.dark {
     background: #3b3b3b;
     color: #e6e6e6;
 }
 
+.light a {
+    color: #3b3b3b !important;
+}
+.dark a {
+    color: #e6e6e6 !important;
+}
+
+/* nav */
 nav {
     border-radius: 32px;
     display: flex;
@@ -28,34 +34,12 @@ nav {
 nav::-webkit-scrollbar {
     display: none;
 }
-
 .light nav {
     background: #ebebeb;
     box-shadow:  12px 12px 32px #c8c8c8, 
                  -12px -12px 32px #ffffff;
 }
-
 .dark nav {
-    background: #3b3b3b;
-    box-shadow:  12px 12px 32px #181818, 
-                 -12px -12px 32px #5e5e5e;
-}
-
-section {
-    border-radius: 36px;
-    min-height: 100px;
-    margin: 20px;
-    margin-bottom: 40px;
-    padding: 30px;
-}
-
-.light section {
-    background: #ebebeb;
-    box-shadow:  12px 12px 32px #c8c8c8, 
-                 -12px -12px 32px #ffffff;
-}
-
-.dark section {
     background: #3b3b3b;
     box-shadow:  12px 12px 32px #181818, 
                  -12px -12px 32px #5e5e5e;
@@ -73,15 +57,52 @@ nav li {
     border-radius: 24px;
     cursor: pointer;
 }
-
 .light nav li {
     background: #ebebeb;
     box-shadow:  inset 6px 6px 12px #c8c8c8, 
                  inset -6px -6px 12px #ffffff;
 }
-
 .dark nav li {
     background: #3b3b3b;
     box-shadow:  inset 6px 6px 12px #181818, 
                  inset -6px -6px 12px #5e5e5e;
+}
+
+/* sections */
+section {
+    border-radius: 36px;
+    min-height: 100px;
+    margin: 20px;
+    margin-bottom: 40px;
+    padding: 30px;
+}
+.light section {
+    background: #ebebeb;
+    box-shadow:  12px 12px 32px #c8c8c8, 
+                 -12px -12px 32px #ffffff;
+}
+.dark section {
+    background: #3b3b3b;
+    box-shadow:  12px 12px 32px #181818, 
+                 -12px -12px 32px #5e5e5e;
+}
+
+section td.tb_year {
+    font-size: 0.5em;
+    opacity: 0.6;
+    border-right: 2px solid;
+    width: 70px;
+}
+.light section td.tb_year {
+    border-color: #3b3b3b;
+}
+.dark section td.tb_year {
+    border-color: #e6e6e6;
+}
+
+section tr.tb_space {
+    height: 10px;
+}
+section td.tb_desc {
+    padding-left: 10px;
 }
