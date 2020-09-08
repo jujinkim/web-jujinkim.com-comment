@@ -46,14 +46,13 @@ function loadSlot(elem) {
 
 function setThemeByTime() {
     const hour = new Date().getHours;
-    const body = document.getElementsByTagName("body").item(0);
 
     if (hour <= 7 || hour >= 19) {
         // Day, Light
-        body.classList.add("light");
+        document.body.classList.add("light");
     } else {
         // Night, Dark
-        body.classList.add("dark");
+        document.body.classList.add("dark");
     }
 }
 
