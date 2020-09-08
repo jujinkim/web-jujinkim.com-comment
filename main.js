@@ -1,62 +1,30 @@
+function initialize() {
+    loadSlot(document.getElementById('bio'));
+    loadSlot(document.getElementById('career'));
+    loadSlot(document.getElementById('project'));
+    loadSlot(document.getElementById('etc'));
+    loadSlot(document.getElementById('link'));
 
-/**
- * Shrink Navigation menu
- */
-function shrinkNav() {
-    let nav = document.getElementById("nav");
-    nav.classList.remove("full");
-    nav.getElementsByTagName("ul")[0].offsetHeight;
-    nav.classList.add("shrink");
+    setThemeByTime();
 }
 
-/**
- * Expand Navigation menu
- */
-function expandNav() {
-    let nav = document.getElementById("nav");
-    nav.classList.remove("shrink");
-    nav.getElementsByTagName("ul")[0].offsetHeight;
-    nav.classList.add("full");
-}
-
-/**
- * Close window
- */
-function closeWindow() {
-    let window = document.getElementById("main");
-    window.classList.remove("open");
-    window.classList.add("close");
-}
-
-/**
- * Open window
- */
-function openWindow(elem) {
-    let window = document.getElementById("main");
-    window.classList.remove("close");
-    window.classList.add("open");
-
-    //show loading
-    let loading = document.getElementById("loading");
-    loading.classList.remove("hide");
-    loading.classList.add("show");
-
+function loadSlot(elem) {
     //get page url
     let xhttp = new XMLHttpRequest();
     switch(elem.id) {
-        case 'navBio' :
+        case 'bio' :
             xhttp.open('GET', 'pages/bio.html', true);
         break;
-        case 'navCareer' :
+        case 'career' :
             xhttp.open('GET', 'pages/career.html', true);
         break;
-        case 'navEtc' :
+        case 'etc' :
             xhttp.open('GET', 'pages/etc.html', true);
         break;
-        case 'navPrj' :
+        case 'project' :
             xhttp.open('GET', 'pages/project.html', true);
         break;
-        case 'navLink' :
+        case 'link' :
             xhttp.open('GET', 'pages/link.html', true);
         break;
     }
@@ -64,40 +32,53 @@ function openWindow(elem) {
     //push page when loaded
     xhttp.onreadystatechange = function() {
         if(xhttp.readyState === 4) {
-            document.getElementById('mainArticle').innerHTML = xhttp.responseText;
+            elem.innerHTML = xhttp.responseText;
         }
         //hide loading
-        let loading = document.getElementById("loading");
-        loading.classList.remove("show");
-        loading.classList.add("hide");
+        // let loading = document.getElementById("loading");
+        // loading.classList.remove("show");
+        // loading.classList.add("hide");
     }
     
     //load page
     xhttp.send();
 }
 
-/**
- * When close window button clicked
- */
-function closeWindow_OnClick() {
-    closeWindow();
-    expandNav();
+function setThemeByTime() {
+    const hour = new Date().getHours;
+
+    if (hour <= 7 || hour >= 19) {
+        // Day, Light
+        document.body.classList.add("light");
+    } else {
+        // Night, Dark
+        document.body.classList.add("dark");
+    }
 }
 
 /**
- * When button on navigation clicked
+ * When buttons on navigation bar clicked
  */
-function navButton_OnClick(elem) {
-    openWindow(elem);
-    shrinkNav();
+function navButton_OnClick(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
 }
 
 /**
- * Initialize
+ * When the document is scrolled
  */
-let dotMovBG;
-function initialize() {
-    drawBackground();
-    dotMovBG = new DotMovingBG();
-    dotMovBG.initDotMovingBG();
+let navElem;
+window.onscroll = function() {
+    if (document.body.clientWidth < 1024) {
+        // ignore mobile
+        return;
+    }
+
+    if (navElem == null) {
+        navElem = document.getElementById("nav");
+    }
+
+    let scrollTop = window.scrollY;
+    navElem.style.marginTop = scrollTop + 20 + 'px';
 }

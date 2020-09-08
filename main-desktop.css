@@ -1,24 +1,29 @@
-@media (min-width: 601px) {
-    nav ul {
-        flex-direction: row;
-    }
+body {
+    width: 1024px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
-    nav.full li span {
-        font-size: 3vw;
-    }
+nav {
+    padding: 10px;
+    margin: 20px;
+    width:150px;
+    top: 0;
+    height: fit-content;
+}
 
-    nav #logo {
-        transition: left 1s;
-        position: fixed;
-        top:20px;
-    }
+main {
+    margin: 0px;
+    width: calc(100% - 150px);
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 
-    nav.full #logo {
-        font-size:5vw;
-    }
-
-    nav.shrink #logo {
-        left : 40px;
-        font-size:3vw;
-    }
+nav li {
+    left: 0;
+    right: 0;
+    margin-bottom: 30px;
+    padding: 20px;
 }

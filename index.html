@@ -16,41 +16,31 @@
     <title>JujinKim.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="main-mobile.css" />
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 601px)" href="main-desktop.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1023px)" href="main-mobile.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 1024px)" href="main-desktop.css" />
 
     <meta property="fb:admins" content="jujinjujinjujin"/>
-
     <script src="main.js"></script>
-    <script src="bg.js"></script>
-    <script src="bg_dotmoving.js"></script>
 </head>
 <body onload="initialize()">
-    <canvas id="canvasBg"></canvas>
-    <canvas id="canvasDotBg"></canvas>
 
-    <nav id="nav" class="full fullMobile">
-        <div id="logo">JujinKim.com</div>
+    <main id="main">
+        <section id="bio"></section>
+        <section id="career"></section>
+        <section id="project"></section>
+        <section id="etc"></section>
+        <section id="link"></section>
+    </main>     
+
+    <nav id="nav">
         <ul>
-            <li id="navCareer" onclick="navButton_OnClick(this)"><span>Career</span></li>
-            <li id="navPrj" onclick="navButton_OnClick(this)"><span>Project</span></li>
-            <li id="navBio" onclick="navButton_OnClick(this)"><span>Bio</span></li>
-            <li id="navEtc" onclick="navButton_OnClick(this)"><span>Etc.</span></li>
-            <li id="navLink" onclick="navButton_OnClick(this)"><span>Link</span></li>
+            <li id="navBio" onclick="navButton_OnClick('bio')"><span>Bio</span></li>
+            <li id="navCareer" onclick="navButton_OnClick('career')"><span>Career</span></li>
+            <li id="navPrj" onclick="navButton_OnClick('project')"><span>Project</span></li>
+            <li id="navEtc" onclick="navButton_OnClick('etc')"><span>Etc.</span></li>
+            <li id="navLink" onclick="navButton_OnClick('link')"><span>Link</span></li>
         </ul>
     </nav>
-    <main id="main" class="close">
-        <div id="mainWindow">
-            <div id="closeMain" onclick="closeWindow_OnClick()">×</div>
-            <div id="mainArticleWrapper">
-                <article id="mainArticle"></article>
-            </div>
-            <div id="loading" class="hide">Loading..</div>
-        </div>
-    </main>        
-        
-    <footer>
-        JujinKim.com
-    </footer>
+ 
 </body>
 </html>
