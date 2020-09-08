@@ -107,3 +107,9 @@ section tr.tb_space {
 section td.tb_desc {
     padding-left: 10px;
 }
+
+section .tag {
+    display: block;
+    font-size: 0.7em;
+    opacity: 0.6;
+}
