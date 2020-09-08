@@ -22,12 +22,16 @@ body.dark {
 
 nav {
     border-radius: 32px;
-    display:flex;
+    display: flex;
+    scrollbar-width: none;
+}
+nav::-webkit-scrollbar {
+    display: none;
 }
 
 .light nav {
-    background: #e6e6e6;
-    box-shadow:  12px 12px 32px #c4c4c4, 
+    background: #ebebeb;
+    box-shadow:  12px 12px 32px #c8c8c8, 
                  -12px -12px 32px #ffffff;
 }
 
@@ -42,11 +46,12 @@ section {
     min-height: 100px;
     margin: 20px;
     margin-bottom: 40px;
+    padding: 30px;
 }
 
 .light section {
-    background: #e6e6e6;
-    box-shadow:  12px 12px 32px #c4c4c4, 
+    background: #ebebeb;
+    box-shadow:  12px 12px 32px #c8c8c8, 
                  -12px -12px 32px #ffffff;
 }
 
@@ -65,12 +70,13 @@ nav ul {
 }
 
 nav li {
-    border-radius: 12px;
+    border-radius: 24px;
+    cursor: pointer;
 }
 
 .light nav li {
-    background: #e6e6e6;
-    box-shadow:  inset 6px 6px 12px #c4c4c4, 
+    background: #ebebeb;
+    box-shadow:  inset 6px 6px 12px #c8c8c8, 
                  inset -6px -6px 12px #ffffff;
 }
 
