@@ -64,3 +64,21 @@ function navButton_OnClick(id) {
         behavior: "smooth"
     });
 }
+
+/**
+ * When the document is scrolled
+ */
+let navElem;
+window.onscroll = function() {
+    if (document.body.clientWidth < 1024) {
+        // ignore mobile
+        return;
+    }
+
+    if (navElem == null) {
+        navElem = document.getElementById("nav");
+    }
+
+    let scrollTop = window.scrollY;
+    navElem.style.marginTop = scrollTop + 20 + 'px';
+}
