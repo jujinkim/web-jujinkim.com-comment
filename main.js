@@ -4,6 +4,8 @@ function initialize() {
     loadSlot(document.getElementById('project'));
     loadSlot(document.getElementById('etc'));
     loadSlot(document.getElementById('link'));
+
+    setThemeByTime();
 }
 
 function loadSlot(elem) {
@@ -42,6 +44,18 @@ function loadSlot(elem) {
     xhttp.send();
 }
 
+function setThemeByTime() {
+    const hour = new Date().getHours;
+    const body = document.getElementsByTagName("body").item(0);
+
+    if (hour <= 7 || hour >= 19) {
+        // Day, Light
+        body.classList.add("light");
+    } else {
+        // Night, Dark
+        body.classList.add("dark");
+    }
+}
 
 /**
  * When buttons on navigation bar clicked
