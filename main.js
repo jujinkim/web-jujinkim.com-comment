@@ -60,6 +60,8 @@ function setThemeByTime() {
 /**
  * When buttons on navigation bar clicked
  */
-function navButton_OnClick(elem) {
-
+function navButton_OnClick(id) {
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
 }
