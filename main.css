@@ -143,3 +143,24 @@ section .tag {
     font-size: 0.7em;
     opacity: 0.6;
 }
+
+#img_profile {
+    width:160px; 
+    height:160px; 
+    border-radius: 84px; 
+    float: right;
+}
+.light #img_profile {
+    border: 6px solid var(--bg-light);
+    box-shadow: var(--item-shadow-dist) var(--item-shadow-dist)
+                var(--item-shadow-size) var(--bg-light-bottom-shadow), 
+                calc(var(--item-shadow-dist) * -1) calc(var(--item-shadow-dist) * -1)
+                var(--item-shadow-size) var(--bg-light-top-shadow);
+}
+.dark #img_profile {
+    border: 6px solid var(--bg-dark);
+    box-shadow: var(--item-shadow-dist) var(--item-shadow-dist)
+                var(--item-shadow-size) var(--bg-dark-bottom-shadow), 
+                calc(var(--item-shadow-dist) * -1) calc(var(--item-shadow-dist) * -1)
+                var(--item-shadow-size) var(--bg-dark-top-shadow);
+}
