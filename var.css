@@ -1,16 +1,17 @@
 :root {
     --bg-light: #e6e6e6;
-    --bg-light-top-shadow: #ffffff;
-    --bg-light-bottom-shadow: #c8c8c8;
+    --bg-light-top-shadow: #f4f4f4;
+    --bg-light-bottom-shadow: #dadada;
+
     --bg-dark: #3b3b3b;
-    --bg-dark-top-shadow: #5e5e5e;
-    --bg-dark-bottom-shadow: #181818;
+    --bg-dark-top-shadow: #4a4a4a;
+    --bg-dark-bottom-shadow: #313131;
 
     --font-color-light: #3b3b3b;
     --font-color-dark: #e6e6e6;
 
     --section-shadow-dist: 12px;
-    --section-shadow-size: 24px;
+    --section-shadow-size: 32px;
     --item-shadow-dist: 3px;
     --item-shadow-size: 6px;
 }
