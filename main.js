@@ -45,7 +45,7 @@ function loadSlot(elem) {
 }
 
 function setThemeByTime() {
-    const hour = new Date().getHours;
+    const hour = new Date().getHours();
 
     if (hour >= 7 && hour <= 19) {
         // Day, Light
