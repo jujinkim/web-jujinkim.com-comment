@@ -60,13 +60,13 @@ nav li {
 }
 .light nav li {
     background: #ebebeb;
-    box-shadow:  inset 6px 6px 12px #c8c8c8, 
-                 inset -6px -6px 12px #ffffff;
+    box-shadow:  inset 3px 3px 6px #c8c8c8, 
+                 inset -3px -3px 6px #ffffff;
 }
 .dark nav li {
     background: #3b3b3b;
-    box-shadow:  inset 6px 6px 12px #181818, 
-                 inset -6px -6px 12px #5e5e5e;
+    box-shadow:  inset 3px 3px 6px #181818, 
+                 inset -3px -3px 6px #5e5e5e;
 }
 
 /* sections */
