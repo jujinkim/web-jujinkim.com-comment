@@ -91,17 +91,31 @@ section {
 }
 .light section {
     background: var(--bg-light);
+    border: 3px solid var(--bg-light);
     box-shadow: var(--section-shadow-dist) var(--section-shadow-dist)
                 var(--section-shadow-size) var(--bg-light-bottom-shadow), 
                 calc(var(--section-shadow-dist) * -1) calc(var(--section-shadow-dist) * -1)
-                var(--section-shadow-size) var(--bg-light-top-shadow);
+                var(--section-shadow-size) var(--bg-light-top-shadow),
+                inset 
+                var(--section-inset-shadow-dist) var(--section-inset-shadow-dist)
+                var(--section-inset-shadow-size) var(--bg-light-bottom-shadow), 
+                inset 
+                calc(var(--section-inset-shadow-dist) * -1) calc(var(--section-inset-shadow-dist) * -1)
+                var(--section-inset-shadow-size) var(--bg-light-top-shadow);
 }
 .dark section {
     background: var(--bg-dark);
+    border: 3px solid var(--bg-dark);
     box-shadow: var(--section-shadow-dist) var(--section-shadow-dist)
                 var(--section-shadow-size) var(--bg-dark-bottom-shadow), 
                 calc(var(--section-shadow-dist) * -1) calc(var(--section-shadow-dist) * -1)
-                var(--section-shadow-size) var(--bg-dark-top-shadow);
+                var(--section-shadow-size) var(--bg-dark-top-shadow),
+                inset 
+                var(--section-inset-shadow-dist) var(--section-inset-shadow-dist)
+                var(--section-inset-shadow-size) var(--bg-dark-bottom-shadow), 
+                inset 
+                calc(var(--section-inset-shadow-dist) * -1) calc(var(--section-inset-shadow-dist) * -1)
+                var(--section-inset-shadow-size) var(--bg-dark-top-shadow);
 }
 
 section td.tb_year {

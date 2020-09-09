@@ -12,6 +12,8 @@
 
     --section-shadow-dist: 12px;
     --section-shadow-size: 32px;
+    --section-inset-shadow-dist: 2px;
+    --section-inset-shadow-size: 6px;
     --item-shadow-dist: 3px;
     --item-shadow-size: 6px;
 }
