@@ -24,6 +24,9 @@ main {
 nav li {
     left: 0;
     right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding: 20px;
+}
+nav ul :last-child {
+    margin-bottom: 0;
 }
