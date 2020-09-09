@@ -1,0 +1,16 @@
+:root {
+    --bg-light: #e6e6e6;
+    --bg-light-top-shadow: #ffffff;
+    --bg-light-bottom-shadow: #c8c8c8;
+    --bg-dark: #3b3b3b;
+    --bg-dark-top-shadow: #5e5e5e;
+    --bg-dark-bottom-shadow: #181818;
+
+    --font-color-light: #3b3b3b;
+    --font-color-dark: #e6e6e6;
+
+    --section-shadow-dist: 12px;
+    --section-shadow-size: 24px;
+    --item-shadow-dist: 3px;
+    --item-shadow-size: 6px;
+}
