@@ -69,7 +69,7 @@ nav li {
                 var(--item-shadow-size) var(--bg-light-bottom-shadow), 
                 inset 
                 calc(var(--item-shadow-dist) * -1) calc(var(--item-shadow-dist) * -1)
-                var(--item-shadow-size)px var(--bg-light-top-shadow);
+                var(--item-shadow-size) var(--bg-light-top-shadow);
 }
 .dark nav li {
     background: var(--bg-dark);
