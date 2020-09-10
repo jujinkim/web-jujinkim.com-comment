@@ -145,6 +145,7 @@ section .tag {
     opacity: 0.6;
 }
 
+/* Profile image */
 #img_profile {
     width:160px; 
     height:160px; 
