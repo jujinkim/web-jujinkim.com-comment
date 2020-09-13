@@ -116,3 +116,15 @@ section hr {
                 calc(var(--item-shadow-dist) * -1) calc(var(--item-shadow-dist) * -1)
                 var(--item-shadow-size) var(--bg-top-shadow);
 }
+
+/* Links */
+div.divLinks img {
+    width: 24px;
+    height: 24px;
+}
+.light div.divLinks img.white,
+.dark div.divLinks img.black,
+.rosegold div.divLinks img.black
+{
+    display: none;
+}
