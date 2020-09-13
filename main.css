@@ -12,21 +12,13 @@ html {
 body {
     margin: auto;
     height: 100%;
-}
-body.light {
-    background: var(--bg-light);
-    color: var(--font-color-light);
-}
-body.dark {
-    background: var(--bg-dark);
-    color: var(--font-color-dark);
+    background: var(--bg);
+    color: var(--font-color);
 }
 
-.light a {
-    color: var(--font-color-light) !important;
-}
-.dark a {
-    color: var(--font-color-dark) !important;
+
+a {
+    color: var(--font-color) !important;
 }
 
 /* nav */
@@ -34,23 +26,14 @@ nav {
     border-radius: 32px;
     display: flex;
     scrollbar-width: none;
+    background: var(--bg);
+    box-shadow: var(--section-shadow-dist) var(--section-shadow-dist)
+                var(--section-shadow-size) var(--bg-bottom-shadow), 
+                calc(var(--section-shadow-dist) * -1) calc(var(--section-shadow-dist) * -1)
+                var(--section-shadow-size) var(--bg-top-shadow);
 }
 nav::-webkit-scrollbar {
     display: none;
-}
-.light nav {
-    background: var(--bg-light);
-    box-shadow: var(--section-shadow-dist) var(--section-shadow-dist)
-                var(--section-shadow-size) var(--bg-light-bottom-shadow), 
-                calc(var(--section-shadow-dist) * -1) calc(var(--section-shadow-dist) * -1)
-                var(--section-shadow-size) var(--bg-light-top-shadow);
-}
-.dark nav {
-    background: var(--bg-dark);
-    box-shadow: var(--section-shadow-dist) var(--section-shadow-dist)
-                var(--section-shadow-size) var(--bg-dark-bottom-shadow), 
-                calc(var(--section-shadow-dist) * -1) calc(var(--section-shadow-dist) * -1)
-                var(--section-shadow-size) var(--bg-dark-top-shadow);
 }
 
 nav ul {
@@ -65,24 +48,13 @@ nav li {
     border-radius: 24px;
     cursor: pointer;
     overflow: hidden;
-}
-.light nav li {
-    background: var(--bg-light);
+    background: var(--bg);
     box-shadow: inset
                 var(--item-shadow-dist) var(--item-shadow-dist)
-                var(--item-shadow-size) var(--bg-light-bottom-shadow), 
+                var(--item-shadow-size) var(--bg-bottom-shadow), 
                 inset 
                 calc(var(--item-shadow-dist) * -1) calc(var(--item-shadow-dist) * -1)
-                var(--item-shadow-size) var(--bg-light-top-shadow);
-}
-.dark nav li {
-    background: var(--bg-dark);
-    box-shadow: inset 
-                var(--item-shadow-dist) var(--item-shadow-dist)
-                var(--item-shadow-size) var(--bg-dark-bottom-shadow), 
-                inset 
-                calc(var(--item-shadow-dist) * -1) calc(var(--item-shadow-dist) * -1)
-                var(--item-shadow-size) var(--bg-dark-top-shadow);
+                var(--item-shadow-size) var(--bg-top-shadow);
 }
 
 /* sections */
@@ -92,34 +64,19 @@ section {
     margin: 20px;
     margin-bottom: 40px;
     padding: 30px;
-}
-.light section {
-    background: var(--bg-light);
-    border: 3px solid var(--bg-light);
+    background: var(--bg);
+    border: 3px solid var(--bg);
     box-shadow: var(--section-shadow-dist) var(--section-shadow-dist)
-                var(--section-shadow-size) var(--bg-light-bottom-shadow), 
+                var(--section-shadow-size) var(--bg-bottom-shadow), 
                 calc(var(--section-shadow-dist) * -1) calc(var(--section-shadow-dist) * -1)
-                var(--section-shadow-size) var(--bg-light-top-shadow),
+                var(--section-shadow-size) var(--bg-top-shadow),
                 inset 
                 var(--section-inset-shadow-dist) var(--section-inset-shadow-dist)
-                var(--section-inset-shadow-size) var(--bg-light-bottom-shadow), 
+                var(--section-inset-shadow-size) var(--bg-bottom-shadow), 
                 inset 
                 calc(var(--section-inset-shadow-dist) * -1) calc(var(--section-inset-shadow-dist) * -1)
-                var(--section-inset-shadow-size) var(--bg-light-top-shadow);
-}
-.dark section {
-    background: var(--bg-dark);
-    border: 3px solid var(--bg-dark);
-    box-shadow: var(--section-shadow-dist) var(--section-shadow-dist)
-                var(--section-shadow-size) var(--bg-dark-bottom-shadow), 
-                calc(var(--section-shadow-dist) * -1) calc(var(--section-shadow-dist) * -1)
-                var(--section-shadow-size) var(--bg-dark-top-shadow),
-                inset 
-                var(--section-inset-shadow-dist) var(--section-inset-shadow-dist)
-                var(--section-inset-shadow-size) var(--bg-dark-bottom-shadow), 
-                inset 
-                calc(var(--section-inset-shadow-dist) * -1) calc(var(--section-inset-shadow-dist) * -1)
-                var(--section-inset-shadow-size) var(--bg-dark-top-shadow);
+                var(--section-inset-shadow-size) var(--bg-top-shadow);
+
 }
 
 section td.tb_year {
@@ -127,12 +84,7 @@ section td.tb_year {
     opacity: 0.6;
     border-right: 2px solid;
     width: 70px;
-}
-.light section td.tb_year {
-    border-color: var(--font-color-light);
-}
-.dark section td.tb_year {
-    border-color: var(--font-color-dark);
+    border-color: var(--font-color);
 }
 
 section tr.tb_space {
@@ -149,7 +101,7 @@ section .tag {
 }
 
 section hr {
-    background: var(--font-color-dark);
+    background: var(--font-color);
 }
 
 /* Profile image */
@@ -158,18 +110,9 @@ section hr {
     height:160px; 
     border-radius: 84px; 
     float: right;
-}
-.light #img_profile {
-    border: 6px solid var(--bg-light);
+    border: 6px solid var(--bg);
     box-shadow: var(--item-shadow-dist) var(--item-shadow-dist)
-                var(--item-shadow-size) var(--bg-light-bottom-shadow), 
+                var(--item-shadow-size) var(--bg-bottom-shadow), 
                 calc(var(--item-shadow-dist) * -1) calc(var(--item-shadow-dist) * -1)
-                var(--item-shadow-size) var(--bg-light-top-shadow);
-}
-.dark #img_profile {
-    border: 6px solid var(--bg-dark);
-    box-shadow: var(--item-shadow-dist) var(--item-shadow-dist)
-                var(--item-shadow-size) var(--bg-dark-bottom-shadow), 
-                calc(var(--item-shadow-dist) * -1) calc(var(--item-shadow-dist) * -1)
-                var(--item-shadow-size) var(--bg-dark-top-shadow);
+                var(--item-shadow-size) var(--bg-top-shadow);
 }

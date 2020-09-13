@@ -46,14 +46,23 @@ function loadSlot(elem) {
 
 function setThemeByTime() {
     const hour = new Date().getHours();
+    let themeName;
 
-    if (hour >= 7 && hour <= 19) {
-        // Day, Light
-        document.body.classList.add("light");
-    } else {
-        // Night, Dark
-        document.body.classList.add("dark");
+    const urlStr = window.location.search.toString();
+    if (urlStr.includes("mystic")) {
+        themeName = "rosegold";
     }
+    else {
+        if (hour >= 7 && hour <= 19) {
+            // Day, Light
+            themeName = "light";
+        } else {
+            // Night, Dark
+            themeName = "dark";
+        }
+    }
+
+    document.body.classList.add(themeName);
 }
 
 /**
