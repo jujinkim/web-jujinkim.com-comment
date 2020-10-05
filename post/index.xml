@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Jujin Kim&#39;s blog</title>
-    <link>http://jujinkim.com/post/</link>
+    <link>https://jujinkim.com/post/</link>
     <description>Recent content in Posts on Jujin Kim&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Jujin Kim (Dangumju)</copyright>
     <lastBuildDate>Tue, 06 Oct 2020 02:17:45 +0900</lastBuildDate>
     
-	<atom:link href="http://jujinkim.com/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jujinkim.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Renewal</title>
-      <link>http://jujinkim.com/post/renewal/</link>
+      <link>https://jujinkim.com/post/renewal/</link>
       <pubDate>Tue, 06 Oct 2020 02:17:45 +0900</pubDate>
       
-      <guid>http://jujinkim.com/post/renewal/</guid>
+      <guid>https://jujinkim.com/post/renewal/</guid>
       <description>Hello, This is Jujin Kim&amp;rsquo;s dev&amp;amp;tech engineering blog. Thanks for visiting.
 Currently this site is under the renewal update.
 If you come to see my profile page, please click HERE.
