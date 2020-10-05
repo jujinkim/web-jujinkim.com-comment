@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://jujinkim.com/ko/post/</loc>
+    <lastmod>2020-10-06T02:17:45+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://jujinkim.com/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://jujinkim.com/ko/post/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://jujinkim.com/ko/</loc>
+    <lastmod>2020-10-06T02:17:45+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://jujinkim.com/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://jujinkim.com/ko/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://jujinkim.com/ko/post/renewal/</loc>
+    <lastmod>2020-10-06T02:17:45+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://jujinkim.com/post/renewal/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://jujinkim.com/ko/post/renewal/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://jujinkim.com/ko/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://jujinkim.com/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://jujinkim.com/ko/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://jujinkim.com/ko/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://jujinkim.com/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://jujinkim.com/ko/tags/"
+                />
+  </url>
+  
+</urlset>
