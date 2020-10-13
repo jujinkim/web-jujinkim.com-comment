@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://jujinkim.com/</loc>
-    <lastmod>2020-10-06T02:17:45+09:00</lastmod>
+    <lastmod>2020-10-13T22:45:58+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://jujinkim.com/post/</loc>
-    <lastmod>2020-10-06T02:17:45+09:00</lastmod>
+    <lastmod>2020-10-13T22:45:58+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
@@ -29,6 +29,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://jujinkim.com/post/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://jujinkim.com/post/use-utterances-comment-hugo/</loc>
+    <lastmod>2020-10-13T22:45:58+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://jujinkim.com/ko/post/use-utterances-comment-hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jujinkim.com/post/use-utterances-comment-hugo/"
                 />
   </url>
   

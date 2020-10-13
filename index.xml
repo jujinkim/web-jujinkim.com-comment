@@ -6,10 +6,20 @@
     <description>Recent content on Jujin Kim&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Jujin Kim (Dangumju)</copyright>
-    <lastBuildDate>Tue, 06 Oct 2020 02:17:45 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2020 22:45:58 +0900</lastBuildDate>
     
 	<atom:link href="https://jujinkim.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Use Utterances comment service at Hugo</title>
+      <link>https://jujinkim.com/post/use-utterances-comment-hugo/</link>
+      <pubDate>Tue, 13 Oct 2020 22:45:58 +0900</pubDate>
+      
+      <guid>https://jujinkim.com/post/use-utterances-comment-hugo/</guid>
+      <description>Usually, some blog platforms such as WordPress and Blogger support their own comment system. However, since the comment system needs a server and DB, it is not able to be applied directly to a static web page. So we need a comment service that using an external server and script.
+There are a bunch of comment systems, We&amp;rsquo;re gonna take a look the service that named utterances in this post.</description>
+    </item>
     
     <item>
       <title>Renewal</title>
