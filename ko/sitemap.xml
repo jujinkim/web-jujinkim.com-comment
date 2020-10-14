@@ -5,6 +5,7 @@
   <url>
     <loc>https://jujinkim.com/ko/post/</loc>
     <lastmod>2020-10-13T22:45:58+09:00</lastmod>
+    <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -20,6 +21,7 @@
   <url>
     <loc>https://jujinkim.com/ko/post/use-utterances-comment-hugo/</loc>
     <lastmod>2020-10-13T22:45:58+09:00</lastmod>
+    <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -35,6 +37,7 @@
   <url>
     <loc>https://jujinkim.com/ko/</loc>
     <lastmod>2020-10-13T22:45:58+09:00</lastmod>
+    <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -50,6 +53,7 @@
   <url>
     <loc>https://jujinkim.com/ko/post/renewal/</loc>
     <lastmod>2020-10-06T02:17:45+09:00</lastmod>
+    <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -64,6 +68,7 @@
   
   <url>
     <loc>https://jujinkim.com/ko/categories/</loc>
+    <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -78,6 +83,7 @@
   
   <url>
     <loc>https://jujinkim.com/ko/tags/</loc>
+    <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
