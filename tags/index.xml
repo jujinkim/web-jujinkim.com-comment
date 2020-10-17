@@ -5,10 +5,6 @@
     <link>https://jujinkim.com/tags/</link>
     <description>Recent content in Tags on Jujin Kim&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Jujin Kim (Dangumju)</copyright>
-    
-	<atom:link href="https://jujinkim.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>Jujin Kim (Dangumju)</copyright><atom:link href="https://jujinkim.com/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

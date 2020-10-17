@@ -5,10 +5,6 @@
     <link>https://jujinkim.com/ko/categories/</link>
     <description>Recent content in Categories on 김주진 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Jujin Kim (Dangumju)</copyright>
-    
-	<atom:link href="https://jujinkim.com/ko/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <copyright>Jujin Kim (Dangumju)</copyright><atom:link href="https://jujinkim.com/ko/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

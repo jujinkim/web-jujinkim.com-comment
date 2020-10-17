@@ -6,11 +6,7 @@
     <description>Recent content in Posts on Jujin Kim&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Jujin Kim (Dangumju)</copyright>
-    <lastBuildDate>Tue, 13 Oct 2020 22:45:58 +0900</lastBuildDate>
-    
-	<atom:link href="https://jujinkim.com/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 13 Oct 2020 22:45:58 +0900</lastBuildDate><atom:link href="https://jujinkim.com/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Use Utterances comment at Hugo</title>
       <link>https://jujinkim.com/post/use-utterances-comment-hugo/</link>
