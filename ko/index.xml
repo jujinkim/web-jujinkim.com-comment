@@ -34,5 +34,14 @@
       <description>안녕하세요, 이곳은 김주진의 개발 기술 블로그입니다. 방문해주셔서 감사합니다. 현재 이 싸이트는 공사중입니다. 프로필 페이지를 보러오셨다면 여기를 눌러주세</description>
     </item>
     
+    <item>
+      <title>Archive</title>
+      <link>https://jujinkim.com/ko/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jujinkim.com/ko/archives/</guid>
+      <description>archives</description>
+    </item>
+    
   </channel>
 </rss>

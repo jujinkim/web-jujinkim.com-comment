@@ -67,6 +67,21 @@
   </url>
   
   <url>
+    <loc>https://jujinkim.com/archives/</loc>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://jujinkim.com/ko/archives/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jujinkim.com/archives/"
+                />
+  </url>
+  
+  <url>
     <loc>https://jujinkim.com/categories/</loc>
     <changefreq>weekly</changefreq>
     <xhtml:link
