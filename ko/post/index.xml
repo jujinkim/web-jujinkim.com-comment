@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 김주진 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Jujin Kim (Dangumju)</copyright>
-    <lastBuildDate>Tue, 13 Oct 2020 22:45:58 +0900</lastBuildDate><atom:link href="https://jujinkim.com/ko/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Oct 2020 01:12:39 +0900</lastBuildDate><atom:link href="https://jujinkim.com/ko/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DI(의존성 주입)란 무엇일까?</title>
+      <link>https://jujinkim.com/ko/post/what-is-di/</link>
+      <pubDate>Sun, 18 Oct 2020 01:12:39 +0900</pubDate>
+      
+      <guid>https://jujinkim.com/ko/post/what-is-di/</guid>
+      <description>이 글은 Dagger2를 공부하기에 앞서 DI(의존성 주입)라는게 무엇인지 도저히 모르겠는 분들을 위한(나를 위한) 글입니다. DI란 무엇인가? DI는 의존</description>
+    </item>
+    
     <item>
       <title>Utterances 덧글 적용하기 (Hugo)</title>
       <link>https://jujinkim.com/ko/post/use-utterances-comment-hugo/</link>
