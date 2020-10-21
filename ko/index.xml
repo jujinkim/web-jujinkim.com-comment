@@ -9,28 +9,28 @@
     <lastBuildDate>Sun, 18 Oct 2020 01:12:39 +0900</lastBuildDate><atom:link href="https://jujinkim.com/ko/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DI(의존성 주입)란 무엇일까?</title>
-      <link>https://jujinkim.com/ko/post/what-is-di/</link>
+      <link>https://jujinkim.com/ko/post/2020/what-is-di/</link>
       <pubDate>Sun, 18 Oct 2020 01:12:39 +0900</pubDate>
       
-      <guid>https://jujinkim.com/ko/post/what-is-di/</guid>
+      <guid>https://jujinkim.com/ko/post/2020/what-is-di/</guid>
       <description>이 글은 Dagger2를 공부하기에 앞서 DI(의존성 주입)라는게 무엇인지 도저히 모르겠는 분들을 위한(나를 위한) 글입니다. DI란 무엇인가? DI는 의존</description>
     </item>
     
     <item>
       <title>Utterances 덧글 적용하기 (Hugo)</title>
-      <link>https://jujinkim.com/ko/post/use-utterances-comment-hugo/</link>
+      <link>https://jujinkim.com/ko/post/2020/use-utterances-comment-hugo/</link>
       <pubDate>Tue, 13 Oct 2020 22:45:58 +0900</pubDate>
       
-      <guid>https://jujinkim.com/ko/post/use-utterances-comment-hugo/</guid>
+      <guid>https://jujinkim.com/ko/post/2020/use-utterances-comment-hugo/</guid>
       <description>보통 네이버나 티스토리같은 블로그 플랫폼들은 자체 덧글 시스템을 지원합니다. 하지만 덧글 시스템은 서버와 DB가 필요하기 때문에, 정적 블로그 싸이트에서는 바로</description>
     </item>
     
     <item>
       <title>리뉴얼</title>
-      <link>https://jujinkim.com/ko/post/renewal/</link>
+      <link>https://jujinkim.com/ko/post/2020/renewal/</link>
       <pubDate>Tue, 06 Oct 2020 02:17:45 +0900</pubDate>
       
-      <guid>https://jujinkim.com/ko/post/renewal/</guid>
+      <guid>https://jujinkim.com/ko/post/2020/renewal/</guid>
       <description>안녕하세요, 이곳은 김주진의 개발 기술 블로그입니다. 방문해주셔서 감사합니다. 현재 이 싸이트는 공사중입니다. 프로필 페이지를 보러오셨다면 여기를 눌러주세</description>
     </item>
     

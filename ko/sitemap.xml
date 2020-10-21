@@ -3,9 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jujinkim.com/ko/post/what-is-di/</loc>
+    <loc>https://jujinkim.com/ko/post/2020/what-is-di/</loc>
     <lastmod>2020-10-18T01:12:39+09:00</lastmod>
     <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jujinkim.com/post/2020/what-is-di/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://jujinkim.com/ko/post/2020/what-is-di/"
+                />
   </url>
   
   <url>
@@ -41,34 +51,34 @@
   </url>
   
   <url>
-    <loc>https://jujinkim.com/ko/post/use-utterances-comment-hugo/</loc>
+    <loc>https://jujinkim.com/ko/post/2020/use-utterances-comment-hugo/</loc>
     <lastmod>2020-10-13T22:45:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://jujinkim.com/post/use-utterances-comment-hugo/"
+                href="https://jujinkim.com/post/2020/use-utterances-comment-hugo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://jujinkim.com/ko/post/use-utterances-comment-hugo/"
+                href="https://jujinkim.com/ko/post/2020/use-utterances-comment-hugo/"
                 />
   </url>
   
   <url>
-    <loc>https://jujinkim.com/ko/post/renewal/</loc>
+    <loc>https://jujinkim.com/ko/post/2020/renewal/</loc>
     <lastmod>2020-10-06T02:17:45+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://jujinkim.com/post/renewal/"
+                href="https://jujinkim.com/post/2020/renewal/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://jujinkim.com/ko/post/renewal/"
+                href="https://jujinkim.com/ko/post/2020/renewal/"
                 />
   </url>
   
