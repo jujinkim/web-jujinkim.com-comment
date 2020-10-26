@@ -6,7 +6,16 @@
     <description>Recent content on 김주진 블로그</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Jujin Kim (Dangumju)</copyright>
-    <lastBuildDate>Sun, 18 Oct 2020 01:12:39 +0900</lastBuildDate><atom:link href="https://jujinkim.com/ko/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Oct 2020 00:50:19 +0900</lastBuildDate><atom:link href="https://jujinkim.com/ko/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>프레임워크와 라이브러리의 차이</title>
+      <link>https://jujinkim.com/ko/post/2020/difference-framework-library/</link>
+      <pubDate>Mon, 26 Oct 2020 00:50:19 +0900</pubDate>
+      
+      <guid>https://jujinkim.com/ko/post/2020/difference-framework-library/</guid>
+      <description>프레임워크 프레임워크는 프로젝트의 전반적인 틀을 잡아주는 도구입니다. 한국어로는 뼈대이며, 영어로는 Frame + Work 두 단어를 합친 것입니다. 작품을 만들 때 뼈대 위에</description>
+    </item>
+    
     <item>
       <title>DI(의존성 주입)란 무엇일까?</title>
       <link>https://jujinkim.com/ko/post/2020/what-is-di/</link>
