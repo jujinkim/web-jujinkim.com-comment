@@ -3,8 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jujinkim.com/post/2020/difference-framework-library/</loc>
+    <lastmod>2020-10-26T00:50:14+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://jujinkim.com/ko/post/2020/difference-framework-library/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jujinkim.com/post/2020/difference-framework-library/"
+                />
+  </url>
+  
+  <url>
     <loc>https://jujinkim.com/</loc>
-    <lastmod>2020-10-18T01:12:39+09:00</lastmod>
+    <lastmod>2020-10-26T00:50:14+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"
@@ -20,7 +36,7 @@
   
   <url>
     <loc>https://jujinkim.com/post/</loc>
-    <lastmod>2020-10-18T01:12:39+09:00</lastmod>
+    <lastmod>2020-10-26T00:50:14+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <xhtml:link
                 rel="alternate"

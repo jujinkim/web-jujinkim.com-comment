@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Jujin Kim&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Jujin Kim (Dangumju)</copyright>
-    <lastBuildDate>Sun, 18 Oct 2020 01:12:39 +0900</lastBuildDate><atom:link href="https://jujinkim.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Oct 2020 00:50:14 +0900</lastBuildDate><atom:link href="https://jujinkim.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Difference between Framework and Library</title>
+      <link>https://jujinkim.com/post/2020/difference-framework-library/</link>
+      <pubDate>Mon, 26 Oct 2020 00:50:14 +0900</pubDate>
+      
+      <guid>https://jujinkim.com/post/2020/difference-framework-library/</guid>
+      <description>Framework  Framework is a tool that wraps up whole project codes. When you create some statues, you may make a skeleton(framework) first and build the rest upon the skeleton. Projects are also not different, writing codes to fit the framework. It&amp;rsquo;s like writing codes into the framework.
+ Framework decides the architecture or style, development plan of the project. Developers are programming within the framework. Some project codes invoke methods of the framework, but, usually, projects are developed using methods that are provided by interfaces from the framework.</description>
+    </item>
+    
     <item>
       <title>What is DI(Dependency Injection)?</title>
       <link>https://jujinkim.com/post/2020/what-is-di/</link>

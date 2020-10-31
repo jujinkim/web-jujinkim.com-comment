@@ -38,6 +38,16 @@
     <loc>https://jujinkim.com/ko/post/2020/difference-framework-library/</loc>
     <lastmod>2020-10-26T00:50:19+09:00</lastmod>
     <changefreq>weekly</changefreq>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jujinkim.com/post/2020/difference-framework-library/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://jujinkim.com/ko/post/2020/difference-framework-library/"
+                />
   </url>
   
   <url>
