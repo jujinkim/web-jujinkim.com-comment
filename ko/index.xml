@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>안드로이드에서 Dagger2 사용하기 - 기본</title>
+      <link>https://jujinkim.com/ko/post/2020/dagger2-android-basic/</link>
+      <pubDate>Thu, 22 Oct 2020 22:32:05 +0900</pubDate>
+      
+      <guid>https://jujinkim.com/ko/post/2020/dagger2-android-basic/</guid>
+      <description>지난 글에서는 DI란 무엇인가에 대해 라면 요리사를 예로 들면서 살펴보았습니다. 하지만 라면 만드는 요리사 하나를 구현하는데 너무 많은 코드를 작성했다고 생각되었</description>
+    </item>
+    
+    <item>
       <title>DI(의존성 주입)란 무엇일까?</title>
       <link>https://jujinkim.com/ko/post/2020/what-is-di/</link>
       <pubDate>Sun, 18 Oct 2020 01:12:39 +0900</pubDate>
