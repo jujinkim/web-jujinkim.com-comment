@@ -2,7 +2,7 @@ function initialize() {
     loadSlot(document.getElementById('bio'));
     loadSlot(document.getElementById('career'));
     loadSlot(document.getElementById('project'));
-    loadSlot(document.getElementById('etc'));
+    loadSlot(document.getElementById('exp'));
     loadSlot(document.getElementById('link'));
 
     setThemeByTime();
