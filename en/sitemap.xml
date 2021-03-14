@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://jujinkim.com/post/2020/difference-framework-library/</loc>
     <lastmod>2020-10-26T00:50:14+09:00</lastmod>
@@ -16,9 +15,7 @@
                 hreflang="en"
                 href="https://jujinkim.com/post/2020/difference-framework-library/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jujinkim.com/</loc>
     <lastmod>2020-10-26T00:50:14+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -32,9 +29,7 @@
                 hreflang="en"
                 href="https://jujinkim.com/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jujinkim.com/post/</loc>
     <lastmod>2020-10-26T00:50:14+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -48,9 +43,7 @@
                 hreflang="en"
                 href="https://jujinkim.com/post/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jujinkim.com/post/2020/what-is-di/</loc>
     <lastmod>2020-10-18T01:12:39+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -64,9 +57,7 @@
                 hreflang="en"
                 href="https://jujinkim.com/post/2020/what-is-di/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jujinkim.com/post/2020/use-utterances-comment-hugo/</loc>
     <lastmod>2020-10-13T22:45:58+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -80,9 +71,7 @@
                 hreflang="en"
                 href="https://jujinkim.com/post/2020/use-utterances-comment-hugo/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jujinkim.com/post/2020/renewal/</loc>
     <lastmod>2020-10-06T02:17:45+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -96,9 +85,7 @@
                 hreflang="en"
                 href="https://jujinkim.com/post/2020/renewal/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jujinkim.com/archives/</loc>
     <changefreq>weekly</changefreq>
     <xhtml:link
@@ -111,9 +98,7 @@
                 hreflang="en"
                 href="https://jujinkim.com/archives/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jujinkim.com/categories/</loc>
     <changefreq>weekly</changefreq>
     <xhtml:link
@@ -126,9 +111,7 @@
                 hreflang="en"
                 href="https://jujinkim.com/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jujinkim.com/tags/</loc>
     <changefreq>weekly</changefreq>
     <xhtml:link
@@ -142,5 +125,4 @@
                 href="https://jujinkim.com/tags/"
                 />
   </url>
-  
 </urlset>

@@ -18,8 +18,8 @@ function loadSlot(elem) {
         case 'career' :
             xhttp.open('GET', 'pages/career.html', true);
         break;
-        case 'etc' :
-            xhttp.open('GET', 'pages/etc.html', true);
+        case 'exp' :
+            xhttp.open('GET', 'pages/exp.html', true);
         break;
         case 'project' :
             xhttp.open('GET', 'pages/project.html', true);
