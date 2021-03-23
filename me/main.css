@@ -107,11 +107,12 @@ section hr {
 
 /* Profile image */
 #img_profile {
-    width:160px; 
-    height:160px; 
-    border-radius: 84px; 
-    float: right;
-    border: 6px solid var(--bg);
+    width:100px; 
+    height:100px; 
+    border-radius: 24px; 
+    right: 0;
+    position: absolute;
+    border: 4px solid var(--bg);
     box-shadow: var(--item-shadow-dist) var(--item-shadow-dist)
                 var(--item-shadow-size) var(--bg-bottom-shadow), 
                 calc(var(--item-shadow-dist) * -1) calc(var(--item-shadow-dist) * -1)
