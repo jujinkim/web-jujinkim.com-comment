@@ -1,4 +1,5 @@
 function initialize() {
+    loadSlot(document.getElementById('jujin'));
     loadSlot(document.getElementById('bio'));
     loadSlot(document.getElementById('career'));
     loadSlot(document.getElementById('project'));
@@ -12,6 +13,9 @@ function loadSlot(elem) {
     //get page url
     let xhttp = new XMLHttpRequest();
     switch(elem.id) {
+        case 'jujin' :
+            xhttp.open('GET', 'pages/jujin.html', true);
+        break;
         case 'bio' :
             xhttp.open('GET', 'pages/bio.html', true);
         break;

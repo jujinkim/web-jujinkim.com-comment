@@ -107,8 +107,8 @@ section hr {
 
 /* Profile image */
 #img_profile {
-    width:100px; 
-    height:100px; 
+    width:140px; 
+    height:140px; 
     border-radius: 24px; 
     right: 0;
     position: absolute;
