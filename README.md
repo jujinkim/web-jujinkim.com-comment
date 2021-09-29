@@ -1,6 +1,7 @@
-# DEPRECATED
+# DEPRECATED (2021.09.28)
 
 This repository is no longer maintained. [Here is the new repository](https://gitlab.com/jujinkim/hugo-jujinkim-com/).
+This repository will be used only for jujinkim.com utterance issue comments.
 
 # jujinkim.com
 
